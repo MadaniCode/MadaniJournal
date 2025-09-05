@@ -24,6 +24,13 @@ marked.setOptions({ renderer });
 
 // --- Entries stored directly in JS (Markdown format) ---
 const entries = [
+    {
+    date: "Sat 6th September",
+    content: [
+      "![pic1](Images/OnaScan.jpg)",
+      "Thank you [Ona](https://www.instagram.com/saintona2037/)."
+    ]
+  },
   {
     date: "Fri 5th September",
     content: [
