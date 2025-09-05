@@ -1,0 +1,94 @@
+// --- Custom renderer for marked ---
+// Adds support for ![audio](file.mp3) and ![video](file.mp4)
+const renderer = new marked.Renderer();
+
+renderer.image = function (href, title, text) {
+  // Newer versions of marked sometimes pass an object instead of strings
+  if (typeof href === "object" && href !== null) {
+    const token = href;
+    href = token.href;
+    title = token.title;
+    text = token.text;
+  }
+
+  if (text === "audio") {
+    return `<audio controls src="${href}" style="width:100%;"></audio>`;
+  }
+  if (text === "video") {
+    return `<video controls src="${href}" style="max-width:100%; height:auto; display:block; margin:10px 0;"></video>`;
+  }
+  return `<img src="${href}" alt="${text || ""}" style="max-width:100%; height:auto; display:block; margin:10px 0;">`;
+};
+
+marked.setOptions({ renderer });
+
+// --- Entries stored directly in JS (Markdown format) ---
+const entries = [
+  {
+    date: "Fri 5th September",
+    content: [
+      "People want to be entertained, not impressed.",
+      "By this, I mean that the average person on any social platform is looking to be entertained rather than be impressed. Something being impressive can definitely participate in making something entertaining but it’s only 1 ingredient. Is flexing still a thing?",
+      "Prior to the [Slawn](https://www.instagram.com/olaoluslawn/) interview releasing, the best case scenario for both me and [Kenta](https://www.instagram.com/kentaosborn/) was that it would get his attention. We thought it might take a big marketing effort but within a few hours, his manager contacted us and during our brief conversation he mentioned that Slawn had liked the video and shared it with him. This was better than our best case scenario and it took 10% of the effort we thought it would.",
+      "I was telling this story to a friend. He asked me why I sounded so underwhelmed. It didn’t do it for me."
+    ]
+  },
+  {
+    date: "Thu 4th September",
+    content: [
+      "I have a reason to write, and I need an excuse to take action so I have created this blog/website/journal thing. Im honestly unsure of my intentions with it, I just want to write.",
+      "I would love to say something like “I want to be able to read this in the future and reflect on how I have changed” but I don’t value that so much. But I can see why people do.",
+      "Photos hold progression of your physical form, you can gauge some idea of what kind of person you were but to be able to read your thoughts in writing is far more vivid.",
+      "I really just want to write and be discovered. Its selfish really."
+    ]
+  },
+
+];
+
+// --- Render entries ---
+function renderEntries() {
+  const blogContainer = document.getElementById("blog");
+
+  entries.forEach(entry => {
+    const entryDiv = document.createElement("div");
+    entryDiv.classList.add("entry");
+
+    const dateDiv = document.createElement("div");
+    dateDiv.classList.add("date");
+    dateDiv.textContent = entry.date;
+
+    const contentDiv = document.createElement("div");
+    contentDiv.classList.add("content");
+
+    entry.content.forEach(block => {
+      const div = document.createElement("div");
+      div.innerHTML = marked.parse(block);
+      contentDiv.appendChild(div);
+    });
+
+    entryDiv.appendChild(dateDiv);
+    entryDiv.appendChild(contentDiv);
+    blogContainer.appendChild(entryDiv);
+
+    // Toggle open/close
+    dateDiv.addEventListener("click", () => {
+      const isOpen = contentDiv.classList.contains("open");
+      if (isOpen) {
+        // Closing entry
+        contentDiv.classList.remove("open");
+        dateDiv.classList.remove("active");
+
+        // Pause all media inside when collapsed
+        contentDiv.querySelectorAll("audio, video").forEach(media => {
+          media.pause();
+        });
+      } else {
+        // Opening entry
+        contentDiv.classList.add("open");
+        dateDiv.classList.add("active");
+      }
+    });
+  });
+}
+
+renderEntries();
