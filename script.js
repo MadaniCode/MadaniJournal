@@ -31,7 +31,7 @@ const entries = [
       "I asked him if I should move to London. He said no, that it’s too expensive and I can do everything from Instagram.",
       "It’s been a year and four months since that conversation. He was right but also wrong. I still feel like objectively moving to London will solve many of my problems, but it will create more difficult ones in return.",
       "A friend said I should apply for internships which may be slightly aspirational, like [Mowa](https://www.instagram.com/mowalola/?hl=en) and [YZY](https://www.instagram.com/yzy/?hl=en).",
-      "I’ve already curated a list of 50 ‘coworkers,’ as I call them, people I want to work with in due time. Why not take the chance and try to contact them all now?",
+      "I’ve already curated a list of 50 ‘coworkers’, as I call them, people I want to work with in due time. Why not take the chance and try to contact them all now?",
       "When I was writing the [Frederic Saint Parck](https://www.instagram.com/frederic_saint_parck/?hl=en) interview, I included a question along the lines of: \"I’m sometimes hesitant to reach out to people because I don’t think it’s the right time just yet. Like maybe if I work on my portfolio a little more I’ll be more confident reaching out. Is this a false notion? Is there a right time? And what should you have ready to show before reaching out to the people you admire or want to work with?\" I included that question for this very reason. I’m trying to pick the right time to reach out to people, but really there's nothing to lose and a lot to gain."
     ]
   },
