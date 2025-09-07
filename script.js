@@ -24,6 +24,18 @@ marked.setOptions({ renderer });
 
 // --- Entries stored directly in JS (Markdown format) ---
 const entries = [
+   {
+    date: "Sun 7th September",
+    content: [
+      "![pic1](Images/OnaScan.jpg)",
+      "I met [Gabriel Moses](https://www.instagram.com/gabrielomoses/?hl=en) on the 7th of May 2024",
+      "I asked him if I should move to London. He said no, that its too expensive and i can do everything from Instagram",
+      "Its been a year and four months since that conversation. He was right but also wrong. I still feel like objectively moving to london will solve many of my problems, but it will create more difficult ones in return.",
+      "A friend said I should apply for internships which may be slightly aspirational. Like [Mowa](https://www.instagram.com/mowalola/?hl=en) and [YZY](https://www.instagram.com/yzy/?hl=en)",
+      "Ive already curated a list of 50 coworkers as i call them. People I want to work with in due time. Why not take the change and try to contact them all now?",
+      "When i was writing the Frederick saint Parck interview, i included a question along the lines of \"I’m sometimes hesitant to reach out to people because I don’t think it’s the right time just yet. Like maybe if I work on my portfolio a little more I’ll be more confident reaching out. Is this a false notion? Is there a right time? And what should you have ready to show before reaching out to the people you admire or want to work with?\". I included that question for this very reason, Im trying to pick a time to reach out to people but really theres no right time, nothing to lose and alot to gain." "
+    ]
+  },
     {
     date: "Sat 6th September",
     content: [
