@@ -25,6 +25,18 @@ marked.setOptions({ renderer });
 // --- Entries stored directly in JS (Markdown format) ---
 const entries = [
    {
+    date: "Mon 8th September",
+    content: [
+      "I *should* be doing more.",
+      "Screwdriver, flathead, wrench, pliers, bolt cutter. I’m utilitarian at heart, which is ironic because designers are treated like tools. Pick it up, use it, throw it back in its box, and retire it when it’s been worn down so much that it’s no longer functional. Designers don’t bark back really, they sit at the bottom of the food chain, and input starts at the top, just a tool.",
+      "No one expects feedback from a designer. I’m not meant to be one then. [Michelangelo](https://en.wikipedia.org/wiki/Michelangelo) said, “I am still learning” at 87, [Slawn](https://www.instagram.com/olaoluslawn/) says he’s not an artist, [Virgil Abloh](https://www.instagram.com/virgilabloh/) put aside perfection for learning. It’s always time to learn.",
+      "This picture was taken on the 6th. I was with [Hashim](https://www.instagram.com/tramihsah/) at a coffee shop, they were making a list of albums that they think have influenced [Justin Bieber’s](https://www.instagram.com/lilbieber/) Swag II. I like this idea of curating but also being historic and somewhat objective about it, even though it’s music.",
+      "![Shortland List](Images/IMG_4574.JPG)",
+      "Might be seeing Bladee in December w/ [Harris](https://www.instagram.com/higheste_____hrz/)."
+    ]
+   },
+
+  {
     date: "Sun 7th September",
     content: [
       "I met [Gabriel Moses](https://www.instagram.com/gabrielomoses/?hl=en) on the 7th of May 2024.",
@@ -38,7 +50,7 @@ const entries = [
     {
     date: "Sat 6th September",
     content: [
-      "![pic1](Images/OnaScan.jpg)",
+      "![Ona Letter](Images/OnaScan.jpg)",
       "Thank you [Ona](https://www.instagram.com/saintona2037/)."
     ]
   },
@@ -48,7 +60,7 @@ const entries = [
       "People want to be entertained, not impressed.",
       "By this, I mean that the average person on any social platform is looking to be entertained rather than be impressed. Something being impressive can definitely participate in making something entertaining but it’s only 1 ingredient. Is flexing still a thing?",
       "Prior to the [Slawn](https://www.instagram.com/olaoluslawn/) interview releasing, the best case scenario for both me and [Kenta](https://www.instagram.com/kentaosborn/) was that it would get his attention. We thought it might take a big marketing effort but within a few hours, his manager contacted us and during our brief conversation he mentioned that Slawn had liked the video and shared it with him. This was better than our best case scenario and it took 10% of the effort we thought it would.",
-      "I was telling this story to a friend. He asked me why I sounded so underwhelmed. It didn’t do it for me."
+      "I was telling this story to a friend. He asked me why I sounded so underwhelmed. It didn’t do it for me.",
     ]
   },
   {
