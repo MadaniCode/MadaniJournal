@@ -24,6 +24,12 @@ marked.setOptions({ renderer });
 
 // --- Entries stored directly in JS (Markdown format) ---
 const entries = [
+     {
+    date: "Wed 10th September",
+    content: [
+      "![things](Images/howimage.png)",
+    ]
+   },
    {
     date: "Mon 8th September",
     content: [
