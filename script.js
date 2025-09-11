@@ -30,7 +30,6 @@ const entries = [
       "do less, better, faster, whilst focused.",
       "today i started [Folded. ](https://www.instagram.com/foldedissue/)",
       "![Notebook1](Images/Notebookspread.png)",
-      "been listening to alot of [Bloody Shield.](https://open.spotify.com/track/7ylT5TWoAwQ4CXjZVCY7b4?si=3221f1d990684a3f)"
     ]
    },
      {
