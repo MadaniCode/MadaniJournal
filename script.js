@@ -24,7 +24,18 @@ marked.setOptions({ renderer });
 
 // --- Entries stored directly in JS (Markdown format) ---
 const entries = [
-       {
+    {
+    date: "Fri 12th September",
+    content: [
+      "I lost something today. It wasn’t mine to have.",
+      "Scrolled the day away at work, there’s a camera in the office pointed right at my desk. The camera has a green light which sometimes turns orange. At first, I thought it could only be caused by two things.",
+      "1. Motion sensor sets it off into a different recording mode.",
+      "2. Someone is actively watching and accessing the feed.",
+      "To test my theory, I waited for the camera to turn green, then walked by it quickly a few times. Nothing happened, so it’s likely the second possibility. Either way, I scrolled the day away.",
+      "Incoming \"I got fired today\" entry.",
+    ]
+   },
+   {
     date: "Thu 11th September",
     content: [
       "do less, better, faster, whilst focused.",
