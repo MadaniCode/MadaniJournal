@@ -25,6 +25,16 @@ marked.setOptions({ renderer });
 // --- Entries stored directly in JS (Markdown format) ---
 const entries = [
     {
+    date: "Sat 13th September",
+    content: [
+      "Where do I fit, do I need to fit, or should I make room?",
+      "I remember [Sam](https://www.instagram.com/p/DL_jZWsNBw8/) saying, “I’m interested in dealing with what we already have.”",
+      "![Carrying](Images/carrying.png)",
+      "I will soon make a list of obsessions.",
+      "I’m looking to meet more people in London. I need to get out of the city more, and thats where the designers are.",
+    ]
+   },
+    {
     date: "Fri 12th September",
     content: [
       "I lost something today. It wasn’t mine to have.",
