@@ -1,9 +1,8 @@
 // --- Custom renderer for marked ---
-// Adds support for ![audio](file.mp3) and ![video](file.mp4)
 const renderer = new marked.Renderer();
 
 renderer.image = function (href, title, text) {
-  // Newer versions of marked sometimes pass an object instead of strings
+  // Handle marked object format
   if (typeof href === "object" && href !== null) {
     const token = href;
     href = token.href;
@@ -11,20 +10,48 @@ renderer.image = function (href, title, text) {
     text = token.text;
   }
 
+  // Audio
   if (text === "audio") {
-    return `<audio controls src="${href}" style="width:100%;"></audio>`;
+    return `<audio controls src="${href}" style="width:100%; margin:10px 0;"></audio>`;
   }
+
+  // Video
   if (text === "video") {
     return `<video controls src="${href}" style="max-width:100%; height:auto; display:block; margin:10px 0;"></video>`;
   }
-  return `<img src="${href}" alt="${text || ""}" style="max-width:100%; height:auto; display:block; margin:10px 0;">`;
+
+  // Image: create placeholder <img> and set width/height once loaded
+  const img = document.createElement('img');
+  img.src = href;
+  img.alt = text || "";
+  img.loading = "lazy";
+  img.decoding = "async";
+  img.style = "max-width:100%; height:auto; display:block; margin:10px 0;";
+
+  // Set intrinsic width and height once the image has loaded
+  img.onload = () => {
+    img.width = img.naturalWidth;
+    img.height = img.naturalHeight;
+  };
+
+  return img.outerHTML;
 };
 
 marked.setOptions({ renderer });
 
 // --- Entries stored directly in JS (Markdown format) ---
 const entries = [
-    {
+  {
+    date: "Sun 14th September",
+    content: [
+      "The lack of formula excites me, and that’s why process can be so fascinating.",
+      "Toni spoke to me about the importance of making things physical.",
+      "Real people, real spaces, real food and drinks, a rejection of how we consume media. When I first began making reels for Keep, I didn’t like the idea of making video content in general, but now I’ve framed it as an art almost. Through this I found content design, and it’s something I love and enjoy. I see the value in what she said.",
+      "She also told me to meet my dreams and reality halfway, and to not be consumed by dreams and delusions.",
+      "![Rain in Cov](Images/covrai.png)",
+    ]
+  },
+  {
     date: "Sat 13th September",
     content: [
       "Where do I fit, do I need to fit, or should I make room?",
@@ -33,8 +60,8 @@ const entries = [
       "I will soon make a list of obsessions.",
       "I’m looking to meet more people in London. I need to get out of the city more, and thats where the designers are.",
     ]
-   },
-    {
+  },
+  {
     date: "Fri 12th September",
     content: [
       "I lost something today. It wasn’t mine to have.",
@@ -44,22 +71,22 @@ const entries = [
       "To test my theory, I waited for the camera to turn green, then walked by it quickly a few times. Nothing happened, so it’s likely the second possibility. Either way, I scrolled the day away.",
       "Incoming \"I got fired today\" entry.",
     ]
-   },
-   {
+  },
+  {
     date: "Thu 11th September",
     content: [
       "do less, better, faster, whilst focused.",
       "today i started [Folded. ](https://www.instagram.com/foldedissue/)",
       "![Notebook1](Images/Notebookspread.png)",
     ]
-   },
-     {
+  },
+  {
     date: "Wed 10th September",
     content: [
       "![things](Images/howimage.png)",
     ]
-   },
-   {
+  },
+  {
     date: "Mon 8th September",
     content: [
       "I *should* be doing more.",
@@ -69,8 +96,7 @@ const entries = [
       "![Shortland List](Images/IMG_4574.jpg)",
       "Might be seeing Bladee in December w/ [Harris](https://www.instagram.com/higheste_____hrz/)."
     ]
-   },
-
+  },
   {
     date: "Sun 7th September",
     content: [
@@ -82,7 +108,7 @@ const entries = [
       "When I was writing the [Frederic Saint Parck](https://www.instagram.com/frederic_saint_parck/?hl=en) interview, I included a question along the lines of: \"I’m sometimes hesitant to reach out to people because I don’t think it’s the right time just yet. Like maybe if I work on my portfolio a little more I’ll be more confident reaching out. Is this a false notion? Is there a right time? And what should you have ready to show before reaching out to the people you admire or want to work with?\" I included that question for this very reason. I’m trying to pick the right time to reach out to people, but really there's nothing to lose and a lot to gain."
     ]
   },
-    {
+  {
     date: "Sat 6th September",
     content: [
       "![Ona Letter](Images/OnaScan.jpg)",
@@ -107,7 +133,6 @@ const entries = [
       "I really just want to write and be discovered. Its selfish really."
     ]
   },
-
 ];
 
 // --- Render entries ---

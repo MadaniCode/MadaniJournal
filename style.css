@@ -19,7 +19,7 @@ body {
 .date {
   cursor: pointer;
   color: #777; /* lighter grey */
-  transition: color 0.2s;
+  transition: color 0.4s;
 }
 .date:hover,
 .date.active {
@@ -29,7 +29,7 @@ body {
 .content {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  transition: max-height 0.6s ease;
   margin-left: 20px;
   max-width: 280px;
   white-space: normal;
