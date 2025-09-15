@@ -1,6 +1,9 @@
+
+
 // --- Custom renderer for marked ---
 const renderer = new marked.Renderer();
 
+// Instead of rendering <img>/<audio>/<video> immediately, we insert placeholders
 renderer.image = function (href, title, text) {
   // Handle marked object format
   if (typeof href === "object" && href !== null) {
@@ -10,31 +13,18 @@ renderer.image = function (href, title, text) {
     text = token.text;
   }
 
-  // Audio
+  // Audio placeholder
   if (text === "audio") {
-    return `<audio controls src="${href}" style="width:100%; margin:10px 0;"></audio>`;
+    return `<div class="media-placeholder" data-type="audio" data-src="${href}"></div>`;
   }
 
-  // Video
+  // Video placeholder
   if (text === "video") {
-    return `<video controls src="${href}" style="max-width:100%; height:auto; display:block; margin:10px 0;"></video>`;
+    return `<div class="media-placeholder" data-type="video" data-src="${href}"></div>`;
   }
 
-  // Image: create placeholder <img> and set width/height once loaded
-  const img = document.createElement('img');
-  img.src = href;
-  img.alt = text || "";
-  img.loading = "lazy";
-  img.decoding = "async";
-  img.style = "max-width:100%; height:auto; display:block; margin:10px 0;";
-
-  // Set intrinsic width and height once the image has loaded
-  img.onload = () => {
-    img.width = img.naturalWidth;
-    img.height = img.naturalHeight;
-  };
-
-  return img.outerHTML;
+  // Image placeholder
+  return `<div class="media-placeholder" data-type="image" data-src="${href}" data-alt="${text || ""}"></div>`;
 };
 
 marked.setOptions({ renderer });
@@ -42,13 +32,24 @@ marked.setOptions({ renderer });
 // --- Entries stored directly in JS (Markdown format) ---
 const entries = [
   {
+    date: "Mon 15th September",
+    content: [
+      "Labi Siffre talking about how he landed on the name *Nigger* for his debut poetry book.",
+      "![audio](Audio/labi1.mp3)",
+      "Labi Siffre on being astonished.",
+      "![audio](Audio/labi2.mp3)",
+      "This is how a great man thinks.",
+      "[Credits](https://www.youtube.com/watch?v=xyTE3pVWnTE)",
+    ]
+  },
+  {
     date: "Sun 14th September",
     content: [
       "The lack of formula excites me, and that’s why process can be so fascinating.",
       "Toni spoke to me about the importance of making things physical.",
       "Real people, real spaces, real food and drinks, a rejection of how we consume media. When I first began making reels for Keep, I didn’t like the idea of making video content in general, but now I’ve framed it as an art almost. Through this I found content design, and it’s something I love and enjoy. I see the value in what she said.",
       "She also told me to meet my dreams and reality halfway, and to not be consumed by dreams and delusions.",
-      "![Rain in Cov](Images/covrai.png)",
+      "![Rain in Cov](Images/covrai.png)"
     ]
   },
   {
@@ -58,7 +59,7 @@ const entries = [
       "I remember [Sam](https://www.instagram.com/p/DL_jZWsNBw8/) saying, “I’m interested in dealing with what we already have.”",
       "![Carrying](Images/carrying.png)",
       "I will soon make a list of obsessions.",
-      "I’m looking to meet more people in London. I need to get out of the city more, and thats where the designers are.",
+      "I’m looking to meet more people in London. I need to get out of the city more, and thats where the designers are."
     ]
   },
   {
@@ -69,7 +70,7 @@ const entries = [
       "1. Motion sensor sets it off into a different recording mode.",
       "2. Someone is actively watching and accessing the feed.",
       "To test my theory, I waited for the camera to turn green, then walked by it quickly a few times. Nothing happened, so it’s likely the second possibility. Either way, I scrolled the day away.",
-      "Incoming \"I got fired today\" entry.",
+      "Incoming \"I got fired today\" entry."
     ]
   },
   {
@@ -77,13 +78,13 @@ const entries = [
     content: [
       "do less, better, faster, whilst focused.",
       "today i started [Folded. ](https://www.instagram.com/foldedissue/)",
-      "![Notebook1](Images/Notebookspread.png)",
+      "![Notebook1](Images/Notebookspread.png)"
     ]
   },
   {
     date: "Wed 10th September",
     content: [
-      "![things](Images/howimage.png)",
+      "![things](Images/howimage.png)"
     ]
   },
   {
@@ -121,7 +122,7 @@ const entries = [
       "People want to be entertained, not impressed.",
       "By this, I mean that the average person on any social platform is looking to be entertained rather than be impressed. Something being impressive can definitely participate in making something entertaining but it’s only 1 ingredient. Is flexing still a thing?",
       "Prior to the [Slawn](https://www.instagram.com/olaoluslawn/) interview releasing, the best case scenario for both me and [Kenta](https://www.instagram.com/kentaosborn/) was that it would get his attention. We thought it might take a big marketing effort but within a few hours, his manager contacted us and during our brief conversation he mentioned that Slawn had liked the video and shared it with him. This was better than our best case scenario and it took 10% of the effort we thought it would.",
-      "I was telling this story to a friend. He asked me why I sounded so underwhelmed. It didn’t do it for me.",
+      "I was telling this story to a friend. He asked me why I sounded so underwhelmed. It didn’t do it for me."
     ]
   },
   {
@@ -132,7 +133,7 @@ const entries = [
       "Photos hold progression of your physical form, you can gauge some idea of what kind of person you were but to be able to read your thoughts in writing is far more vivid.",
       "I really just want to write and be discovered. Its selfish really."
     ]
-  },
+  }
 ];
 
 // --- Render entries ---
@@ -168,7 +169,7 @@ function renderEntries() {
         contentDiv.classList.remove("open");
         dateDiv.classList.remove("active");
 
-        // Pause all media inside when collapsed
+        // Pause media if any is playing
         contentDiv.querySelectorAll("audio, video").forEach(media => {
           media.pause();
         });
@@ -176,6 +177,46 @@ function renderEntries() {
         // Opening entry
         contentDiv.classList.add("open");
         dateDiv.classList.add("active");
+
+        // Lazy-render media placeholders
+        contentDiv.querySelectorAll(".media-placeholder").forEach(ph => {
+          const type = ph.dataset.type;
+          const src = ph.dataset.src;
+
+          if (type === "audio") {
+            const audio = document.createElement("audio");
+            audio.controls = true;
+            audio.src = src;
+            audio.style.width = "100%";
+            audio.style.margin = "10px 0";
+            ph.replaceWith(audio);
+          }
+
+          if (type === "video") {
+            const video = document.createElement("video");
+            video.controls = true;
+            video.src = src;
+            video.style.maxWidth = "100%";
+            video.style.height = "auto";
+            video.style.display = "block";
+            video.style.margin = "10px 0";
+            ph.replaceWith(video);
+          }
+
+          if (type === "image") {
+            const img = document.createElement("img");
+            img.src = src;
+            img.alt = ph.dataset.alt || "";
+            img.loading = "lazy";
+            img.decoding = "async";
+            img.style = "max-width:100%; height:auto; display:block; margin:10px 0;";
+            img.onload = () => {
+              img.setAttribute("width", img.naturalWidth);
+              img.setAttribute("height", img.naturalHeight);
+            };
+            ph.replaceWith(img);
+          }
+        });
       }
     });
   });

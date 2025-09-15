@@ -77,3 +77,25 @@ audio {
   margin: 8px 0;
   display: block; 
 }
+
+/* --- Media placeholders --- */
+.media-placeholder {
+  background: #f2f2f2;    /* faint grey */
+  border: 1px solid #ddd; /* subtle border */
+  border-radius: 2px;
+  margin: 10px 0;
+  display: block;
+  width: 100%;
+  min-height: 120px;      /* visible block even before media loads */
+  position: relative;
+}
+
+.media-placeholder::after {
+  content: "Loading media…";
+  font-size: 12px;
+  color: #aaa;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
