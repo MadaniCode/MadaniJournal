@@ -1,11 +1,8 @@
-
-
 // --- Custom renderer for marked ---
 const renderer = new marked.Renderer();
 
 // Instead of rendering <img>/<audio>/<video> immediately, we insert placeholders
 renderer.image = function (href, title, text) {
-  // Handle marked object format
   if (typeof href === "object" && href !== null) {
     const token = href;
     href = token.href;
@@ -13,23 +10,14 @@ renderer.image = function (href, title, text) {
     text = token.text;
   }
 
-  // Audio placeholder
-  if (text === "audio") {
-    return `<div class="media-placeholder" data-type="audio" data-src="${href}"></div>`;
-  }
-
-  // Video placeholder
-  if (text === "video") {
-    return `<div class="media-placeholder" data-type="video" data-src="${href}"></div>`;
-  }
-
-  // Image placeholder
+  if (text === "audio") return `<div class="media-placeholder" data-type="audio" data-src="${href}"></div>`;
+  if (text === "video") return `<div class="media-placeholder" data-type="video" data-src="${href}"></div>`;
   return `<div class="media-placeholder" data-type="image" data-src="${href}" data-alt="${text || ""}"></div>`;
 };
 
 marked.setOptions({ renderer });
 
-// --- Entries stored directly in JS (Markdown format) ---
+// --- Entries ---
 const entries = [
   {
     date: "Mon 15th September",
@@ -39,7 +27,7 @@ const entries = [
       "Labi Siffre on being astonished.",
       "![audio](Audio/labi2.mp3)",
       "This is how a great man thinks.",
-      "[Credits](https://www.youtube.com/watch?v=xyTE3pVWnTE)",
+      "[Credits](https://www.youtube.com/watch?v=xyTE3pVWnTE)"
     ]
   },
   {
@@ -165,20 +153,12 @@ function renderEntries() {
     dateDiv.addEventListener("click", () => {
       const isOpen = contentDiv.classList.contains("open");
       if (isOpen) {
-        // Closing entry
         contentDiv.classList.remove("open");
         dateDiv.classList.remove("active");
-
-        // Pause media if any is playing
-        contentDiv.querySelectorAll("audio, video").forEach(media => {
-          media.pause();
-        });
+        contentDiv.querySelectorAll("audio, video").forEach(media => media.pause());
       } else {
-        // Opening entry
         contentDiv.classList.add("open");
         dateDiv.classList.add("active");
-
-        // Lazy-render media placeholders
         contentDiv.querySelectorAll(".media-placeholder").forEach(ph => {
           const type = ph.dataset.type;
           const src = ph.dataset.src;
@@ -210,10 +190,7 @@ function renderEntries() {
             img.loading = "lazy";
             img.decoding = "async";
             img.style = "max-width:100%; height:auto; display:block; margin:10px 0;";
-            img.onload = () => {
-              img.setAttribute("width", img.naturalWidth);
-              img.setAttribute("height", img.naturalHeight);
-            };
+            img.onload = () => { img.setAttribute("width", img.naturalWidth); img.setAttribute("height", img.naturalHeight); };
             ph.replaceWith(img);
           }
         });
