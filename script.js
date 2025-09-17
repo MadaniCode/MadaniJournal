@@ -19,6 +19,22 @@ marked.setOptions({ renderer });
 
 // --- Entries ---
 const entries = [
+    {
+      date: "Wed 17th September",
+      content: [
+        "![Flickington](Images/jumpout.png)",
+        "Need to be less obssessed with time. Need to be less obsessed with life.",
+        "How to find mentor? [Saint Parck](https://www.instagram.com/frederic_saint_parck) said patientce is important but do you have time to be partient? Conversation made me realise I don't understand the true value of a mentor.",
+        "[Blaze](https://www.instagram.com/shovel.studio/) really inspired me last night if im being honest. Study needed.",
+        "Shot by [Maalia](https://www.instagram.com/lialiamaalia)",
+      ]
+    },
+    {
+    date: "Tue 16th September",
+    content: [
+      "![uni](Images/firstdayatuni.png)"
+    ]
+  },
   {
     date: "Mon 15th September",
     content: [
@@ -27,7 +43,7 @@ const entries = [
       "Labi Siffre on being astonished.",
       "![audio](Audio/labi2.mp3)",
       "This is how a great man thinks.",
-      "[Credits](https://www.youtube.com/watch?v=xyTE3pVWnTE)"
+      "[Credits](https://www.youtube.com/watch?v=xyTE3pVWnTE)",
     ]
   },
   {
