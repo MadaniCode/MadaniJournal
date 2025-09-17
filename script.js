@@ -1,3 +1,5 @@
+
+
 // --- Custom renderer for marked ---
 const renderer = new marked.Renderer();
 
@@ -17,6 +19,7 @@ renderer.image = function (href, title, text) {
 
 marked.setOptions({ renderer });
 
+// --- Entries ---
 // --- Entries ---
 const entries = [
     {
@@ -200,14 +203,27 @@ function renderEntries() {
           }
 
           if (type === "image") {
-            const img = document.createElement("img");
+            const img = new Image();
             img.src = src;
             img.alt = ph.dataset.alt || "";
             img.loading = "lazy";
             img.decoding = "async";
-            img.style = "max-width:100%; height:auto; display:block; margin:10px 0;";
-            img.onload = () => { img.setAttribute("width", img.naturalWidth); img.setAttribute("height", img.naturalHeight); };
-            ph.replaceWith(img);
+
+            const wrapper = document.createElement("div");
+            wrapper.style.display = "block";
+            wrapper.style.maxWidth = "100%";
+            wrapper.style.margin = "10px 0";
+            wrapper.style.position = "relative";
+
+            img.onload = () => {
+              wrapper.style.aspectRatio = `${img.naturalWidth} / ${img.naturalHeight}`;
+              img.style.width = "100%";
+              img.style.height = "100%";
+              img.style.objectFit = "contain";
+            };
+
+            wrapper.appendChild(img);
+            ph.replaceWith(wrapper);
           }
         });
       }

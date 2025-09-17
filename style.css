@@ -45,7 +45,11 @@ img {
   max-width: 100%;     /* ensures images don’t overflow */
   height: auto;
   display: block;
-  margin: 10px 0;      /* centered within container */
+  margin: 10px 0;
+
+  aspect-ratio: auto 4 / 3; /* auto if browser knows intrinsic size, fallback 4:3 */
+  object-fit: contain;      /* scale nicely inside reserved space */
+  background: #f8f8f8;      /* faint placeholder box */
 }
 
 em {
