@@ -19,16 +19,35 @@ renderer.image = function (href, title, text) {
 
 marked.setOptions({ renderer });
 
-// --- Entries ---
-// --- Entries ---
+// --- Blog entries data --- lol
 const entries = [
+      {
+      date: "Thu 18th September",
+      content: [
+        "What is a *personal brand?*",
+        "Make content about something in your niche, show you’re capable by breaking down examples or showing how you would do better than the example you’re highlighting. Proof of expertise comes through having the vocabulary and courage to challenge already designed systems. Provide the service and hint that you have it with a call to action, but if you do it well, people will come searching. Don’t forget to wrap it up in a recognisable format by spending way too much time on content design.",
+        "[New Bridge Books](https://www.instagram.com/newbridgebooks?igsh=MW9qcHZ5bjg1cXc0eg%3D%3D), [Village](https://www.instagram.com/villagebooks.co?igsh=eGdidDUyd2M5amt5), and [Digital Archive](https://www.instagram.com/digital_archive?igsh=enhmcXgwZmJ0YWN6).",
+        "All of these accounts have physical stores or an online presence. The ones with physical stores use Instagram to curate selections and highlight new additions to the shelves.",
+        "The outlier is Digital Archive. Their feed is perfect for inspiration but it stops there, no breakdowns, no learning experience, just visual porn.",
+        "[Folded](https://www.instagram.com/foldedissue/) would sit in this same realm. The difference is content structure: 90% reels, plus a weekly post highlighting ‘print porn’.",
+        "The reels wouldn’t just showcase, they’d break down why editorial/book design works and how people can apply the lessons themselves.",
+        "This attracts two types of paying customers:",
+        "1. People or stores who want their books featured. I AM THE MARKETING BUDGET.",
+        "2. People looking for editorial design work. Specifically in places I want to be in such as fashion and design mags as well as book design. Clients who want me on their team.",
+        "The audience is anyone interested in the intersection of design and print. Same archetype as [buttered official](https://www.instagram.com/buttered_official/?hl=en).",
+        "What’s missing is structure, scripting style, and content design. All being developed now.",
+        "I could talk about instagram pages all day, it’s so fascinating to me but also on some [Dan Alves](https://www.instagram.com/dalves/?hl=en) shit, I wanna curate and perfect real experiences. Everything from parties and runways shows to museums.",
+        "Some of my favourite feeds right now:",
+        "[Brenda Hashtag](https://www.instagram.com/brendahashtag/?hl=en), [Lola Dement Myers](https://www.instagram.com/loladementmyers/), and [Forms of Publication](https://www.instagram.com/forms_of_publication/).",
+      ]
+    },
     {
       date: "Wed 17th September",
       content: [
         "![Flickington](Images/jumpout.png)",
-        "Need to be less obssessed with time. Need to be less obsessed with life.",
-        "How to find mentor? [Saint Parck](https://www.instagram.com/frederic_saint_parck) said patientce is important but do you have time to be partient? Conversation made me realise I don't understand the true value of a mentor.",
-        "[Blaze](https://www.instagram.com/shovel.studio/) really inspired me last night if im being honest. Study needed.",
+        "Need to be less obsessed with time. Need to be less obsessed with life.",
+        "How to find a mentor? [Saint Parck](https://www.instagram.com/frederic_saint_parck) said patience is important, but do you have time to be patient? Conversation made me realise I don't understand the true value of a mentor.",
+        "[Blaze](https://www.instagram.com/shovel.studio/) really inspired me last night if I’m being honest. Study needed.",
         "Shot by [Maalia](https://www.instagram.com/lialiamaalia)",
       ]
     },
