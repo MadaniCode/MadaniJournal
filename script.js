@@ -21,6 +21,17 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol
 const entries = [
+        {
+        date: "Sun 21st September",
+        content: [
+          "I'm not very *visual*.",
+          "When I was younger, reading books was my way of challenging my mind and imagination to create things. This was my first encounter with *making for nothing* in return but self pleasure.",
+          "Forming vivid images in my mind, from faces to environments was a muscle I could flex so easily.",
+          "Now, I find it harder than ever. *Imaginative blindness.* When I read, that light is so dim. The visions in my mind are hollow and I find little joy in everything at times because of it.",
+          "![borderforceimage](Images/borderforce.png)",
+          "I love taking pictures of the sink."
+        ]
+      },
       {
       date: "Thu 18th September",
       content: [
