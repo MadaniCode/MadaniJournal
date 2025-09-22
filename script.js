@@ -21,7 +21,14 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol
 const entries = [
-        {
+          {
+        date: "Mon 22nd September",
+        content: [
+          "Living in a state of anhedonia.",
+          "I said *yes* too many times and it caught up to me today. I think I’m qualified to say *no* now."
+        ]
+      },
+      {
         date: "Sun 21st September",
         content: [
           "I'm not very visual.",
