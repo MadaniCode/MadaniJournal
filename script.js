@@ -22,6 +22,15 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol
 const entries = [
           {
+        date: "Mon 24th September",
+        content: [
+          "Can you *try* to play?",
+          "Two years ago, I read [*Psycho-Cybernetics*](https://en.wikipedia.org/wiki/Psycho-Cybernetics) by Maxwell Maltz, and it only fueled my narcissistic desires. I don't think I do anything for the right reasons. [Kenta](https://www.instagram.com/kentaosborn/) sometimes jokingly says, 'Madani when he finds out people do things for fun,' usually in response to me asking why someone is doing something or if they make money from it.",
+          "Maybe that's a tainted worldview for many. The reason I was thinking about this is because I was asking myself if I can enhance certain qualities that define my creative discipline. Like, can I learn to be more curious? Can one *try* to play? Or is that in itself a contradiction?",
+          "I'm sick and my eyes hurt. [Goodnight.](https://www.youtube.com/watch?v=Xa6xZsLI5co&list=RDXa6xZsLI5co&start_radio=1)"
+        ]
+      },
+          {
         date: "Mon 22nd September",
         content: [
           "Living in a state of anhedonia.",
