@@ -22,7 +22,7 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol
 const entries = [
           {
-        date: "Mon 24th September",
+        date: "Wed 24th September",
         content: [
           "Can you *try* to play?",
           "Two years ago, I read [*Psycho-Cybernetics*](https://en.wikipedia.org/wiki/Psycho-Cybernetics) by Maxwell Maltz, and it only fueled my narcissistic desires. I don't think I do anything for the right reasons. [Kenta](https://www.instagram.com/kentaosborn/) sometimes jokingly says, 'Madani when he finds out people do things for fun,' usually in response to me asking why someone is doing something or if they make money from it.",
