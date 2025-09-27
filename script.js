@@ -22,6 +22,17 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol
 const entries = [
           {
+          date: "Sat 27th September",
+          content: [
+            "A collective misunderstanding of what it means to respect.",
+            "The process of making, whether it be writing or design, is liberated by honesty and ultimately shaped by how the audience will encounter it.",
+            "Considerations must be made and connotations must be understood. So much language can be codified from the colour to the form. Many hidden messages can be extracted without actually looking into the content. How can I just ignore that?",
+            "Thinking about dropping out after this year and trying my hand at the design industry. I never feel like what I’m doing right now is good enough and that I’m always two weeks of inactivity away from my candle burning out.",
+            "Really enjoying [Betsy Johnson’s](https://www.instagram.com/betsyjohnson_/) recent work.",
+            "![fehintigif](Images/fehintigif.gif)"
+          ]
+        },
+          {
         date: "Wed 24th September",
         content: [
           "Can you *try* to play?",
