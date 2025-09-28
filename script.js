@@ -22,6 +22,16 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol
 const entries = [
           {
+          date: "Sun 28th September",
+          content: [
+            "I’m often listening to the same three songs on repeat for days. My memory allows for discovery, and undiscovery, again and again.",
+            "Discussing quantity and quality in relation to the shelf life of a project. The people whose work I admire all move on schedules that value getting something right more than getting as much out as quickly as possible.",
+            "Doing what you love versus creating what you love. And if you knew you could achieve anything with your work, what would you achieve?",
+            "![Washing Machine](Images/washingmachine.png)"
+          ]
+         },
+
+          {
           date: "Sat 27th September",
           content: [
             "A collective misunderstanding of what it means to respect.",
