@@ -22,6 +22,22 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol
 const entries = [
           {
+            date: "Fri 3rd October",
+            content: [
+              "Every day this week felt like a Monday and I don’t mind it.",
+              "I’ve been reading articles about graduate roles and the state of the design industry and it’s pretty dire. I saw one on [It’s Nice That](https://www.itsnicethat.com/features/welcome-to-the-entry-level-void-light-and-shade-digital-220925) and also another written by a [RISD](https://www.risd.edu/) professor and my takeaway is that it’s more important than ever to start something for yourself.",
+              "An economy where we pay with *exploitation* for access. Not that I’m not open to being exploited for now.",
+              "‘Good things take time’ needs to be pegged by inflation because good things can be made faster each day. I can feel those around me getting sick of the acceleration.",
+              "![Google Maps](Images/dogss.png)",
+              "One of my modules requires me to make a book for [The Carrier Bag Theory of Fiction](https://theanarchistlibrary.org/mirror/u/uk/ursula-k-le-guin-the-carrier-bag-theory-of-fiction.pdf) by [Ursula K. Le Guin](https://www.ursulakleguin.com/). My strongest concept so far is where the book is contained in a folder of sorts. I like the idea of having everything being interchangeable, because it comes with the connotation that no narrative is set in stone and you’re really open to define it yourself.",
+              "Anyway, need to go find sheets of metal in the next 2 days. Might go dumpster diving in an industrial development site.",
+              "[Ona](https://www.instagram.com/saintona2037/) told me I can print on top of prints. I’m not sure how I haven’t thought of that yet but I think I can make something tasteful. I’m collecting documents. I want everything. Slavery charter papers, divorce documents, a gallery’s proof of sale, just anything.",
+              "![Donald Locke](Images/donald.png)",
+              "I went to the Donald Locke [RESISTANT FORMS](https://www.ikon-gallery.org/exhibition/donald-locke) exhibition at [Ikon Gallery](https://www.ikon-gallery.org/). Seeing someone’s life efforts, views and beliefs contained in a collection of ceramic sculptures was definitely eye opening to me. Much like Ursula, I find the concept of *containment* intriguing.",
+              "Everything is loaded.",
+            ]
+          },
+          {
           date: "Sun 28th September",
           content: [
             "I’m often listening to the same three songs on repeat for days. My memory allows for discovery, and undiscovery, again and again.",
