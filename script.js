@@ -27,7 +27,7 @@ const entries = [
               "Metal sheets secured.",
               "Ended up in the Baxters car park yesterday dismantling microwaves after dark, before picking up a friend to get flowers for mum.",
               "Thank you [Dagg](https://www.instagram.com/jonny_dagg/).",
-              "Fruitful call with Ona yesterday. I find myself trying to fit an idea to a label when really I should be working the other way around.",
+              "Fruitful call with [Ona](https://www.instagram.com/saintona2037/) yesterday. I find myself trying to fit an idea to a label when really I should be working the other way around.",
               "I need to start by making a book. Everything will flow from there.",
               "Me and [Kenta](https://www.instagram.com/kentaosborn/) will put the dog tags up for sale eventually these are just some promotional photos I took a while ago. I think I leaned into the military feel too hard.",
               "![dogtag photo 1](Images/tagevenbetter.gif)",
