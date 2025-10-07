@@ -27,8 +27,7 @@ const entries = [
               "Metal sheets secured.",
               "Ended up in the Baxters car park yesterday dismantling microwaves after dark, before picking up a friend to get flowers for mum.",
               "Thank you [Dagg](https://www.instagram.com/jonny_dagg/).",
-              "Fruitful call with [Ona](https://www.instagram.com/saintona2037/) yesterday. I find myself trying to fit an idea to a label when really I should be working the other way around.",
-              "I need to start by making a book. Everything will flow from there.",
+              "Fruitful call with [Ona](https://www.instagram.com/saintona2037/) yesterday. I find myself trying to fit an idea to a label when really I should be working the other way around. I need to start by making a book. Everything will flow from there.",
               "Me and [Kenta](https://www.instagram.com/kentaosborn/) will put the dog tags up for sale eventually these are just some promotional photos I took a while ago. I think I leaned into the military feel too hard.",
               "![dogtag photo 1](Images/tagevenbetter.gif)",
               "I love a printed image. More work for [myfendetta](https://www.instagram.com/myfendetta/)",
@@ -39,7 +38,7 @@ const entries = [
             date: "Fri 3rd October",
             content: [
               "Every day this week felt like a Monday and I don’t mind it.",
-              "I’ve been reading articles about graduate roles and the state of the design industry and it’s pretty dire. I saw one on [It’s Nice That](https://www.itsnicethat.com/features/welcome-to-the-entry-level-void-light-and-shade-digital-220925) and also another written by a [RISD](https://www.risd.edu/) professor and my takeaway is that it’s more important than ever to start something for yourself.",
+              "I’ve been reading articles about graduate roles and the state of the design industry and it’s pretty dire. I saw one on [It’s Nice That](https://www.itsnicethat.com/features/welcome-to-the-entry-level-void-light-and-shade-digital-220925) and also another written by a [RISD](https://www.risd.edu/) professor . My takeaway is that it’s more important than ever to start something for yourself.",
               "An economy where we pay with *exploitation* for access. Not that I’m not open to being exploited for now.",
               "‘Good things take time’ needs to be pegged by inflation because good things can be made faster each day. I can feel those around me getting sick of the acceleration.",
               "![Google Maps](Images/dogss.png)",
