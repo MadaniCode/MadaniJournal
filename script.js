@@ -21,6 +21,27 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol
 const entries = [
+  {
+    date: "Sat 11th October",
+    content: [
+            "Websites.",
+            "Really finding websites to be an art form. I’ve discovered that anything can be an art form multiple times now, but it still surprises me. I want to be able to control every aspect of an experience the feel, sound, mood, feedback from every interaction, the story being told, the way you traverse the experience and with a website and some code, I can do all of this.",
+            "I really love museums. You decide how much you want to be immersed into the world being presented to you. You can read the interpretive text, or not. You can walk quickly past a sculpture or sit and admire it. With a website, you can do all of these things too. The spaces we build are just as real.",
+            "I will host an art exhibition, send out invites and gift bags with a password to get in. An exhibition where anyone with an invite can visit from wherever they are. It will only be open for a limited time, the gallery can’t be open at all hours, of course.",
+            "Ultimate control over narrative. No need for permission and gatekeepers. A new type of gallery with an intimacy that physical galleries can’t offer.",
+            "![nice day](Images/niceday.png)",
+            "I find myself writing these entries in the last 30 minutes of the day. Goodnight."
+            ]
+          },
+          {
+            date: "Fri 10th October",
+            content: [
+              "I live in the time between these entries.",
+              "",
+              "![](Images/texturees.png)",
+              "<div class='poem'>I want me less of me<br>I want to be more of me<br>I want all of you to want some of me</div>"
+            ]
+          },
             {
             date: "Sun 5th October",
             content: [

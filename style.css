@@ -81,3 +81,10 @@ audio {
   margin: 8px 0;
   display: block; 
 }
+.poem {
+  margin: 10px 0;              /* aligns with regular text spacing */
+  padding-left: 10px;           /* small gap between line and words */
+  border-left: 1px solid #ddd;  /* faint, subtle grey line */
+  font-style: italic;
+  line-height: 1.4;
+}
