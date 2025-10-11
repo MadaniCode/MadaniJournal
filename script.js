@@ -39,7 +39,7 @@ const entries = [
               "I live in the time between these entries.",
               "",
               "![](Images/texturees.png)",
-              "<div class='poem'>I want me less of me<br>I want to be more of me<br>I want all of you to want some of me</div>"
+              "<div class='poem'>I want to be less of me<br>I want to be more of me<br>I want all of you, to want some of me</div>"
             ]
           },
             {
