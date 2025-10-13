@@ -21,6 +21,17 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol
 const entries = [
+    {
+    date: "Sun 12th October",
+    content: [
+      "The most productive use of my time is doing that which I love.",
+      "I’m missing the art for the exhibition idea and also the audience, but I don’t think that’s any reason to stop me. Sometimes I sit on ideas waiting for a bigger budget or a better grip on software, but the more time I take, the less value the idea has. I need to act quickly.",
+      "Sometimes I meet 28 year old models. They’re specialty baristas and aspiring actors all at the same time. That’s all I have to say about that. I have a distorted view of success. How will this manifest into my life and the objects I make.",
+      "Every decision is scary. Sometimes I wonder if it’s worth the thought.",
+      "![brutalistnetherland](Images/PHOTO-2025-10-12-13-12-04.jpg)",
+      "Shot by [Ona](https://www.instagram.com/saintona2037/). “I KNEW IT. I took these pics and I said Madani is gonna love this.”"
+    ]
+  },
   {
     date: "Sat 11th October",
     content: [
