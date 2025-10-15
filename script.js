@@ -21,6 +21,28 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol
 const entries = [
+      {
+      date: "Wed 15th October",
+      content: [
+        "Every time I sit down to write one of these entries, all I can think about is 2 things:",
+        "1. Dropping out",
+        "2. How behind I am",
+        "Spent the day in Liverpool. Definitely not a design city. I wanted to do a studio visit, so a few weeks ago I contacted almost every design studio I could find. I got a few rejections but most never responded. The more I travel the UK, the more I believe that I will never visit a nicer UK city than Edinburgh. Nothing even comes close so far.",
+        "I’m in a nice place where people in my circle will send me Instagram posts just to check out an interesting story or cool content design, so I’m feeling pretty aligned with the people I’m working with.",
+        "Current To-do:",
+        "- Create a Font",
+        "- Create a Specimen for said font",
+        "- Finish commission website",
+        "- Find artist and funding for exhibition",
+        "- Remake portfolio",
+        "- [Frederic Saint Parck](https://www.instagram.com/frederic_saint_parck/) Keep Experience",
+        "- Instagram videos for the [Frederic](https://www.instagram.com/frederic_saint_parck/) interview",
+        "- Create sample layouts for book project",
+        "- Photograph samples",
+        "- Complete video edit commission",
+        "All of these need to be done within a week. Some in 2 days. I’m inspired by the transparency of [Ian](https://www.instagram.com/ian.hatcherwilliams/) from [Gardner NYC](https://www.gardener.nyc/), who I’m hoping to catch on a call sometime soon. Also, the new [*Sex Talk*](https://www.instagram.com/p/DPeT86pEUPg/) series by [Sex Mag](https://www.instagram.com/sexmag/) is captivating for so many reasons. I’ll have to break down the format at some point, but I don’t think there’s much to break down. It’s really the rawness, the feeling of improvisation, and the unexpected answers that keep me watching. That’s only achieved by stripping away the guardrails that stop the interviewer and interviewee from talking truthfully, honestly, and as candidly as possible.",
+      ]
+    },
     {
     date: "Sun 12th October",
     content: [

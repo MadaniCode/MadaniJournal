@@ -88,3 +88,16 @@ audio {
   font-style: italic;
   line-height: 1.4;
 }
+
+.content ul,
+.content ol {
+  margin-left: 20px;   /* gives the list its indentation */
+  padding-left: 10px;    /* optional — keeps it neat */
+}
+
+.content li {
+  margin-bottom: -6px;  /* tighter vertical spacing between list items */
+  line-height: 1.2;    /* matches your text line height */
+}
+
+
