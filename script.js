@@ -22,6 +22,13 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol
 const entries = [
       {
+        date: "Fri 17th October",
+        content: [
+          "Reaching out soon.",
+          "![madani lapse](Images/lapsegif.gif)"
+        ]
+      },
+      {
       date: "Wed 15th October",
       content: [
         "Every time I sit down to write one of these entries, all I can think about is 2 things:",
