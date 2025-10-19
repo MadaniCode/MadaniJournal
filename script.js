@@ -21,6 +21,14 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol
 const entries = [
+        {
+        date: "Sun 19th October",
+        content: [
+          "General consensus about the gallery is that I should create an MVP, both to prove to myself I can manage the logistical side of things while staying within a tight budget, and to show the people I pitch it to a proof of concept. It’s easier to see yourself in something that already exists.",
+          "I have an issue with advice — it almost never seems personal enough to where it matters. Everything has been said. We need to separate advice from learning and talk about the things we aren’t meant to, *especially when we can’t explain why*.",
+          "![plateandsink](Images/platesink.png)"
+        ]
+      },
       {
         date: "Fri 17th October",
         content: [
