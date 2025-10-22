@@ -21,11 +21,23 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol
 const entries = [
+          {
+          date: "Wed 22nd October",
+          content: [
+            "[Frederic Interview](https://keepmagazine.online/pages/frederic-exe#) finally out. Reel could’ve been better, the content design is okay, but the scripting definitely needs work.",
+            "I feel guilty doing job interviews. It feels like I’m selling out. Trading the time I should be using to create in return for temporary chips. It’s part of the process: things I need to immediately pay for, future learning, and projects I need to fund -- all things that could do with a slightly better job.",
+            "I still can’t shake the feeling that if I cut out all the noise and just focused, I could do those things anyway. But money is needed, not only as an indicator of power, but simply to be heard.",
+            "That’s why I want it. That’s why I want anything.",
+            "I think it’s delusional to think otherwise, but as always, I can and will be wrong. I heard Sam Altman makes a list of things he was wrong about.",
+            "Everything seems tangible.",
+            "![feeling wholesome](Images/feetsie.png)"
+          ]
+        },
         {
         date: "Sun 19th October",
         content: [
           "General consensus about the gallery is that I should create an MVP, both to prove to myself I can manage the logistical side of things while staying within a tight budget, and to show the people I pitch it to a proof of concept. It’s easier to see yourself in something that already exists.",
-          "I have an issue with advice — it almost never seems personal enough to where it matters. Everything has been said. We need to separate advice from learning and talk about the things we aren’t meant to, *especially when we can’t explain why*.",
+          "I have an issue with advice -- it almost never seems personal enough to where it matters. Everything has been said. We need to separate advice from learning and talk about the things we aren’t meant to, *especially when we can’t explain why*.",
           "![plateandsink](Images/platesink.png)"
         ]
       },
