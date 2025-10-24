@@ -19,8 +19,23 @@ renderer.image = function (href, title, text) {
 
 marked.setOptions({ renderer });
 
-// --- Blog entries data --- lol
+// --- Blog entries data --- lol  
 const entries = [
+           {
+          date: "Sat 25th October",
+          content: [
+            "![50 Coworkers.](Images/Coworkers.png)",  
+          ]
+        },
+          {
+          date: "Fri 24th October",
+          content: [
+            "Book.",
+            "Chris talked about using advertisers for funding, and talking directly to artists as opposed to looping in managers. A [Keep](https://keepmagazine.online/) event is more feasible than I thought. It has to happen in Edinburgh and I’m not willing to negotiate on that. ",
+            "![shot tonight on a walk. shiny metal gates.](Images/shinymetals.png)",  
+            "How much of my ideas am I willing to sell, knowing It could be done without selling anything at all."
+          ]
+        },
           {
           date: "Wed 22nd October",
           content: [
