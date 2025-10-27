@@ -21,6 +21,20 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol  
 const entries = [
+          {
+            date: "Mon 27th October",
+            content: [
+              "![flicks](Images/stuff.gif)"
+            ]
+          },
+          {
+            date: "Sun 26th October",
+            content: [
+              "<div class='poem'>We should all write<br>And ponder<br>And be bored<br>And read lyrics when you can’t tell what the artist is saying<br>And look at things you don’t care about<br>And collect meaningless things<br>And then attach meaning to them<br><br>But I don’t</div>",
+              "Kenta's Birthday.",
+              "![Kenta Birthday](Images/kentabirthday.png)"
+            ]
+          },
            {
           date: "Sat 25th October",
           content: [

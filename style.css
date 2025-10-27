@@ -101,3 +101,8 @@ audio {
 }
 
 
+.poem.tight {
+  line-height: 2; /* tighter spacing specifically for short poems */
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
