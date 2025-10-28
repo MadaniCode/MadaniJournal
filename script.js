@@ -24,7 +24,7 @@ const entries = [
           {
             date: "Mon 27th October",
             content: [
-              "![flicks](Images/stuff.gif)"
+              "![flicks](Images/updatesswaggid.gif)"
             ]
           },
           {
