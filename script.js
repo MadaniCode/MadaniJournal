@@ -21,6 +21,17 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol  
 const entries = [
+            {
+            date: "Wed 29th October",
+            content: [
+              "Good Morning.",
+              "![flicks](Images/madaniglitch.gif)",
+              "The idea that someone else can control your thoughts. Feeling others are to blame for most of your thoughts. Trouble remembering things, feeling easily annoyed and irritated.",
+              "Feeling afraid in open spaces or in public. Thoughts of ending your life. Feeling that most people could not be trusted. Do you feel tempered outbursts, that you cannot control?",
+              "Feeling lonely, even when you are with people, feeling blocked. Feeling blue, sad, feeling disinterested in things, feeling fearful. Are your feelings easily hurt? Feeling that people are unfriendly, or do you feel like people dislike you? I feel like that.",
+              "<audio controls><source src='Audio/ifeellikethat.mp3' type='audio/mpeg'></audio>"
+            ]
+          },
           {
             date: "Mon 27th October",
             content: [
