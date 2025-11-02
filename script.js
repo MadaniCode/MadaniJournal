@@ -21,6 +21,24 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol  
 const entries = [
+              {
+            date: "Sat 1st November",
+            content: [
+              "![loooppray](Images/letspraygif.gif)",
+              "[*mobile*](Images/letsprayy.jpeg) and [*desktop*](Images/letspraydesktop.png)",
+              "Thank you [Ona](https://www.instagram.com/saintona2037/) <3",
+            ]
+          },
+           {
+            date: "Fri 31st October",
+            content: [
+              "Now that im concious of things.",
+              "Everything is about being concious.",
+              "![flick](Images/Howtopretend.png)",
+              "Some websites ive been looking at:",
+              "[[1](https://www.exitstage.dk/) [2](https://www.p-o.space/) [3](https://noko.st/) [4](https://www.camilleschneider.ch/de) [5](https://bureau.cool/) [6](https://bear-rabe.com/) [7](https://ecologies.online/?utm_source=substack&utm_medium=email#about) [8](https://braden.lol/) [9](https://www.wherewithalgrants.org/) [10](https://www.kdrama.plus/) [11](https://www.grasshopper.co.jp/en/) [12](https://makingremaking.com/) [13](https://www.edoardolunardi.dev/) [14](https://yaleunion.org/) [15](https://aldonchen.com/) [16](https://paul-daunais.info/)]"
+            ]
+          },
             {
             date: "Wed 29th October",
             content: [
