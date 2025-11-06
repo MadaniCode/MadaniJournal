@@ -22,6 +22,17 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
               {
+              date: "Wed 5th November",
+              content: [
+                "London today. I’m getting close to making my decision about dropping out. I’m not so much torn anymore, more so bracing myself to rip off the bandaid.",
+                "Blaze Smith [Podcast](https://open.spotify.com/episode/5VjzkEWMa2XyNeMTZ8PFBu?si=23c3b9219acb4c6b) Notes.",
+                "The process is everything. Taking accountability at all times allows you to analyse and be less judgmental and emotional. Honesty and compromise are the way to manage a client relationship. Shovel is trying to get his website featured by his favourite website curators (wholesome). Don’t think, just go. Otherwise you end up talking yourself out of the thing. (Drop out foreshadowing.) Intentionality sits at the heart of web experiences and great design. Who you’re around is a huge investment, and travel is the only way to actually reset.",
+                "![londontrain](Images/IMG_7299.webp)",
+                "Got featured on the [lavboyslush](https://www.instagram.com/lavboyslush/) [search.](https://www.lavenderslushee.com/hub/search.html)",
+                "Portfolio site design is going slowly, but it's coming together. Trying to nail a design system that's both easy to use, presents the work immediately and elegantly, and also is interesting. Something to keep you on the site even if it's just 10 seconds."
+              ]
+            },
+              {
             date: "Sat 1st November",
             content: [
               "![loooppray](Images/letspraygif.gif)",
