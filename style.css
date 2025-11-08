@@ -106,3 +106,15 @@ audio {
   margin-top: 6px;
   margin-bottom: 6px;
 }
+.secret-box input {
+  width: 74.5%;        /* make input wider */
+  margin-bottom: 5px;
+  margin-right: 5px; /* slight spacing between input and button */
+  font-style: italic;  /* user types in italics */
+}
+
+.secret-box p {
+  color: #555;
+  font-style: italic;
+  margin: 0 0 15px 0;  /* slightly bigger margin underneath */
+}

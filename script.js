@@ -22,6 +22,22 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
               {
+              date: "Sat 8th November",
+              content: [
+                "Secrets?",
+                "<div class='secret-box'><input type='text' id='secretInput' placeholder='Enter your secret'><button onclick='revealSecret()'>Submit</button></div>",
+                "![Let Go Of How!](Images/thedark.webp)"
+              ]
+            },
+            {
+              date: "Fri 7th November",
+              content: [
+                "How important is a mentor and how to find one? A conversation I’ve visited many times now.",
+                "Collecting data concerning dropping out. This is consuming my mental entirely. Talking to those more successful than me, doing what I want to be doing in some way. Every anecdote is one step closer to an informed decision but you can only get so close to the ledge. At some point you have to jump regardless of the remaining uncertainty you cannot cure.",
+                "It's what I make it.",
+                "![mentor conversation instagram text](Images/mentor.webp)"              ]
+            },
+              {
               date: "Wed 5th November",
               content: [
                 "London today. I’m getting close to making my decision about dropping out. I’m not so much torn anymore, more so bracing myself to rip off the bandaid.",
@@ -392,6 +408,7 @@ const entries = [
 
 // --- Render entries ---
 function renderEntries() {
+  
   const blogContainer = document.getElementById("blog");
 
   entries.forEach(entry => {
@@ -479,3 +496,10 @@ function renderEntries() {
 }
 
 renderEntries();
+
+function revealSecret() {
+  const box = event.target.closest('.secret-box');
+  if (box) {
+    box.innerHTML = "<p>Your secret is safe with me</p>";
+  }
+}
