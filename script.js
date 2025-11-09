@@ -22,6 +22,18 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
               {
+              date: "Sun 9th November",
+              content: [
+                "How can I document?",
+                "I spent alot of today collecting work I've already done as I'm slowly but surely compiling my portfolio. It shouldn't have been so difficult to find the files and physicals, I need to document better.",
+                "![Portfolio folder](Images/portfoliofolder.webp)",
+                "I have ideas for website artworks, but they need multiple people to execute. How can I execute the bigger ideas on a smaller scale?",
+                "Also, kinda unrelated, but I really need to control the media I consume. I can feel it degrading my mental and ultimately my work.",
+                "![old spreads](Images/spreads.gif)",
+                "ps. thank you [mokk](https://mokk.co/) and dan wasn't lying."
+              ]
+            },
+              {
               date: "Sat 8th November",
               content: [
                 "Secrets?",
