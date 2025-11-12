@@ -28,7 +28,7 @@ const entries = [
                 "The changes I make will hopefully align me better with my vision, but I’m still sat in the uncomfortable and unfamiliar of it all.",
                 "I meet so many degenerates. How many times have I met “creatives” that are just drug addicts in disguise. There’s no one here I want to meet and I know that’s the wrong mindset.",
                 "Whilst it’s true that the only person that can help me become more than what I am is myself, the people who will help along the way are still strangers I’ve yet to meet.",
-                "I need to listen to my own advice some more, just whilst I look for a mentor. It’s probably one of those things that you can’t look for actually — it just kinda happens. It’s like love, you can’t *want* love. There’s no reference point. It’s never relatable and never in the same conditions or for the same reasons."
+                "I need to listen to my own advice some more, just whilst I look for a mentor. It’s one of those things that you can’t want. It’s like love, you can’t *want* love. There’s no reference point. It’s never relatable and never in the same conditions or for the same reasons."
               ]
             },
               {
