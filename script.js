@@ -22,6 +22,14 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
               {
+              date: "Thu 13th November",
+              content: [
+                "Truth is I should treat reels like a thing that compliments whatever I’m doing at the time.",
+                "I shouldn’t stop everything else to make content, and making the content shouldn’t stop me from making new work. I’m already doing it.",
+                "![Old Overcraw graphic](Images/IMG_7539.webp)",
+                "It’s not often I look back and like something I made. This is one of those times, and it was a complete accident."]
+            },
+              {
               date: "Tue 11th November",
               content: [
                 "My uncertainty isn’t rooted in a lack of faith but a lack of alignment with my vision.",
