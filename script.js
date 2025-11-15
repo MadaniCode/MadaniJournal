@@ -22,6 +22,13 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
               {
+              date: "Fri 14th November",
+              content: [
+                "At work.",
+                "![flicks of me at work. pink button up and grey vneck jumper.](Images/bathroomflicktragic.webp)"
+                ]
+              },
+              {
               date: "Thu 13th November",
               content: [
                 "Truth is I should treat reels like a thing that compliments whatever I’m doing at the time.",
