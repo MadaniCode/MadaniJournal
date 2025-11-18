@@ -21,6 +21,13 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol  
 const entries = [
+            {
+              date: "Tue 18th November",
+              content: [
+                "Yeah, today was crazy. 24 hours of irony.",
+                "Great artists aren’t needed. The best artists don’t get commissions unless it’s to directly create culture by bridging gaps. The real curators want to own the mind itself. It’s no longer about time or effort. This value isn’t tangible."
+              ]
+            },
               {
                 date: "Mon 17th November",
                 content: [
