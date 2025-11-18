@@ -22,6 +22,22 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
               {
+                date: "Mon 17th November",
+                content: [
+                  "Making real.",
+                  "To avert expectations is to risk abandonment. How often do we consider the consequence more than the life that will flourish from our decisions? Are we conditioned to gravitate to negativity, or is everyone so jaded by reality that there is an equilibrium in how we collectively feel about the world and the decisions we make? No one is disappointed anymore?",
+                  "A thread I see in all the people I admire is taking it a step further than everyone else. Making real is part of this. Dan saw TikTok girls complaining about the lack of dinner parties and dining experiences within friend groups. He took action and made [Comunal](https://www.instagram.com/comunal/). Human experience woven through every part of it because that's the root of the issue he is attempting to solve.",
+                  "Another example is [Ye](https://www.instagram.com/ye/) making the music he wanted in the mainstream go mainstream by making it himself at an excellent standard.",
+                  "[Salehe Bembury](https://www.instagram.com/salehebembury/) saw that [Versace](https://www.versace.com/) was missing out on the sneaker market whilst brands like Balenciaga and Louis Vuitton were capitalising on it. He took it that step further by sending his pitch to Dean Quinn, who was the design director at Versace. He left the company after four years with the title of “Vice President of Sneaker Design”. There's more examples obviously, but we need to think like the LinkedIn nerds basically. The guys scrounging together connections and finding hiring managers to better their chances, it's that energy we need in the design space and I'm going to start with [myself](https://www.youtube.com/watch?v=PivWY9wn5ps).",
+                  "When the world isn't giving you the taste and culture you want, you need to want to move.",
+                  "I've been super busy lately, writing an entry has so much friction some nights. Was watching this [video about blogging](https://www.youtube.com/watch?v=luHCRDrunYE) and it kinda opened my eyes to what this act means to people. It's kinda spiritual for some. Proof your mundane and quiet moments matter. The bad meal you ate, the days you do nothing at all, the date that didn't text you back, the pet fish that you forgot to feed one Wednesday... these moments are worth writing about for the simple reason that they happened.",
+                  "For me, I really want to document my design thinking. I haven't the best memory and this is my way of keeping track of my identity as a designer.",
+                  "So help me God, I'm young.",
+                  "![Old Overcraw graphic](Images/bedsideselfie.webp)",
+                  "I pose everything like advice, but im talking to my self."
+                ]
+              },
+              {
               date: "Fri 14th November",
               content: [
                 "At work.",
