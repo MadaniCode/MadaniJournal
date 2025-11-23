@@ -21,6 +21,25 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol  
 const entries = [
+              {
+              date: "Mon 24th November",
+              content: [
+              "![baxters baristas pisser](Images/pisser.webp)",
+              ]
+              },
+            {
+              date: "Sun 23rd November",
+              content: [
+              "What does it mean to be Keep coded? This is really Keep’s first opportunity to establish what imagery and direction we want people to associate with Keep.",
+              "Intentionality is something I come back to again and again. I love subtlety, it’s an art.",
+              '["Cream" designed by Julia Hasting](https://www.juliahasting.com/Cream)',
+              "This example of the Phaidon-published book titled *Cream*, which is an art biannual, comes in a vacuum-sealed package giving it a stiff feel. But once you take it off, and it’s exposed to the air, it becomes unwieldy and flops over like a phone book. The concept of aging and being in the now is so clearly represented. Like taking the plastic off store-bought steak or the seal off a glass bottle—it will simply never be the same. Once the seal is broken, it changes form forever. It’s temporary yet fresh. You can’t let it sit around because it’s right now.",
+              "Can a book be fleeting? Yes.",
+              "This is the level of intention and consideration for form and content we need to have when approaching  any physical media. The standard was set decades ago, it's our turn to execute.",
+              "![baxters baristas pisser](Images/baxterscreenie.webp)",
+
+              ]
+              },
             {
               date: "Sat 22nd November",
               content: [
