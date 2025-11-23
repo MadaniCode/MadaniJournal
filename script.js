@@ -22,10 +22,19 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
             {
+              date: "Thu 22nd November",
+              content: [
+              "wish i had more to say.",
+              "![frederic blinking](Images/freddoblink.gif)",
+              ]
+            },
               date: "Thu 20th November",
               content: [
-                "wish i had more to say",
-                "![frederic blinking](Images/freddoblink.gif)",
+                "I’m seeing a pattern/recurring theme of people distilling media into an alternative form. Like this [ID Magazine](https://i-d.co/) [“Confessional Zine”](https://substack.i-d.co/s/confessional-zine) which I only got because of [Brenda Hashtag](https://www.instagram.com/brendahashtag/?hl=en) tbh but it’s a compilation of all these different Substack writers brought into a magazine paper print. Obviously with this very unorthodox design language, not the kind of thing you expect from paper print. But it’s interesting to bring something that’s innately chronically online to a physical medium like this.",
+                "From a content perspective it’s so interesting. The layers and layers of irony, the niche references that could only be understood by that audience mimicking Substack’s exclusive/club feel… will probably do a study very soon. Swamped atm.",
+                "All of this is really just an excuse to have people fall deeper into the world building through a tertiary point of interaction. It’s an event in people’s lives.",
+                "![confessional zine fam a lam](Images/myyearofrest.webp)",
+                "Why is it that when good things happen to me, I feel a hint of anxiety? I’m sure of my ability to deliver, I’m not sure what else it could be."
               ]
             },
             {
