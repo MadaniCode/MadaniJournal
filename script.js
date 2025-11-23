@@ -22,7 +22,7 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
             {
-              date: "Thu 22nd November",
+              date: "Sat 22nd November",
               content: [
               "wish i had more to say.",
               "![frederic blinking](Images/freddoblink.gif)",
