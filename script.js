@@ -27,7 +27,8 @@ const entries = [
               "wish i had more to say.",
               "![frederic blinking](Images/freddoblink.gif)",
               ]
-            },
+              },
+              {
               date: "Thu 20th November",
               content: [
                 "I’m seeing a pattern/recurring theme of people distilling media into an alternative form. Like this [ID Magazine](https://i-d.co/) [“Confessional Zine”](https://substack.i-d.co/s/confessional-zine) which I only got because of [Brenda Hashtag](https://www.instagram.com/brendahashtag/?hl=en) tbh but it’s a compilation of all these different Substack writers brought into a magazine paper print. Obviously with this very unorthodox design language, not the kind of thing you expect from paper print. But it’s interesting to bring something that’s innately chronically online to a physical medium like this.",
