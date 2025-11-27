@@ -24,11 +24,10 @@ const entries = [
                 {
                 date: "Wed 26th November",
                 content: [
-                  "<iframe src='Images/KeepBookPitch.pdf' width='100%' height='600px' style='border:none; margin:20px 0;'></iframe>",
-                  "<a href='Images/KeepBookPitch.pdf' target='_blank'>Download PDF</a>",
-                  "Made at 6am this morning.",
-                  "![baxters baristas pisser](Images/permenance.webp)",
-                ]
+                "<iframe src='Images/KeepBookPitch.pdf' width='100%' height='100%' style='border:none; margin:10px 0;'></iframe>",
+                "<a href='Images/KeepBookPitch.pdf' target='_blank'>Download PDF</a>",
+                "Made at 6am this morning.",
+              ]
               },
               {
               date: "Mon 24th November",
