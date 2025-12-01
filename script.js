@@ -21,10 +21,37 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol  
 const entries = [
+               {
+                date: "Sun 30th November",
+                content: [
+              `<a href="https://www.glitter-graphics.com/myspace/text_generator.php" target="_blank"
+                style="white-space:nowrap; display:flex; gap:0.8px; align-items:center;">
+                <img src="https://text.glitter-graphics.net/heart/m.gif" style="width:43px;height:auto;">
+                <img src="https://text.glitter-graphics.net/heart/a.gif" style="width:43px;height:auto;">
+                <img src="https://text.glitter-graphics.net/heart/d.gif" style="width:43px;height:auto;">
+                <img src="https://text.glitter-graphics.net/heart/a.gif" style="width:43px;height:auto;">
+                <img src="https://text.glitter-graphics.net/heart/n.gif" style="width:43px;height:auto;">
+                <img src="https://text.glitter-graphics.net/heart/i.gif" style="width:43px;height:auto;">
+              </a>`,
+              "SOOOOO MUCH TO DO!",
+              "Clearing up commission work so I can begin on my portfolio again. The potential I see in Keep is unmatched. I really think the signals for success have been given to us on a platter, and we are ignoring them slightly—or at the very least, not responding with the appropriate action.",
+              "Stopping all commission-based work to become a better person and designer through learning experiences. I don’t think I can raise the value of my time by continuing on my current trajectory. I need to have sharper skills, exposure to a whole lot more work, and knowledgeable people.",
+              "Life is kind of interesting right now. I’m at this weird crossroads, and all the discussions look pretty good. Is this what it means to be young?",
+              "*ps. I'm on LinkedIn. Madani from 2 years ago would cringe so hard. Also, should I look into a design style? How does one double down?*",
+              "*I can hear the rain on my window.Goodnight.*"       
+              ]
+              },
+                {
+                date: "Thu 27th November",
+                content: [
+                "![muzeeum](Images/museaum.webp)",
+                "Time to get really good at writing, and sleeping on time.",
+              ]
+              },
                 {
                 date: "Wed 26th November",
                 content: [
-                "<iframe src='Images/KeepBookPitch.pdf' width='100%' height='100%' style='border:none; margin:10px 0;'></iframe>",
+                "<iframe src='Images/KeepBookPitch.pdf' width='100%' height='300px' style='border:none; margin: 10px 0;'></iframe>",
                 "<a href='Images/KeepBookPitch.pdf' target='_blank'>Download PDF</a>",
                 "Made at 6am this morning.",
               ]
