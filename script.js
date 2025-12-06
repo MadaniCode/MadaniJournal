@@ -22,6 +22,40 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
                {
+                date: "Sun 7th December",
+                content: [
+                    `<div class='quiz-container'>
+                        <div id='quiz-content'>
+                            <button onclick="renderQuizContent('${"Sun 7th December"}')">Start Quiz</button>
+                        </div>
+                    </div>`,
+                ]
+                },
+               {
+                date: "Sat 6th December",
+                content: [
+                  "![Its no new york](Images/81227685-41E8-4412-837B-EB6BD5E5F4A2.webp)",
+                  "'You can see the whole city from here. Its no New York, but this city is part of me.'"
+                ]
+                },
+               {
+                date: "Fri 5th December",
+                content: [
+                "Yesterday was officially my last day enrolled at university.",
+                "I hate to drive this on as it becomes a recurring theme of complaint in my entries, of which there have been few. But I got a taste of a lot of the things I wanted in just a month—the connections, conversations, decisions, opportunities. I told myself it was about time I tackled some of the big decisions.",
+                "I’m probably working on more simultaneous projects than ever before, and to be honest, I’m doing pretty well. I apologise and thank too much. I don’t even know why. Clients like me though, so I don’t care.",
+                "From what I’ve learned so far about clients, it’s all about relationships and getting things done while learning new things yourself. My mind is constantly blown, there’s a level to design shit.",
+                "The [video](https://www.instagram.com/p/DR424WtjI8K/) with Pilot Magazine came out today. Probably the best reel I've made from a direction standpoint, but the script is lacking. There needs to be more continuity between points, and the visual hook at the beginning needs to be far more considered and meaningful to the message of the video."
+                ]
+                },
+                {
+                date: "Wed 3rd December",
+                content: [
+                  "![flicks](Images/envalopes.gif)",
+                  "Cooked."
+              ]
+              },
+               {
                 date: "Sun 30th November",
                 content: [
               `<a href="https://www.glitter-graphics.com/myspace/text_generator.php" target="_blank"
@@ -538,6 +572,128 @@ const entries = [
   }
 ];
 
+// --- Quiz Data and Logic ---
+
+const quizQuestions = [
+    {
+        question: "Who is the cutest boy in the world!",
+        options: ["Braden", "Lavboyslush", "Madani"],
+        answer: "Lavboyslush"
+    },
+    {
+        question: "What is the best font ever made?",
+        options: ["Arial", "Times New Roman", "Helvetica"],
+        answer: "Times New Roman"
+    },
+    {
+        question: "Madani's fav artist?",
+        options: ["Michelangelo", "Reeno", "Virgil Abloh"],
+        answer: "Dan Alves"
+    }
+];
+
+// Global state to manage the quiz instance (keyed by entry date)
+const quizState = {
+    // Only one quiz for now, using the date as a key for future expansion
+    "Sun 7th December": {
+        currentQuestionIndex: 0,
+        score: 0,
+        isQuizActive: false
+    }
+};
+
+// Function to generate the HTML for a single question
+function getQuestionHTML(qIndex) {
+    const q = quizQuestions[qIndex];
+    const isLast = qIndex === quizQuestions.length - 1;
+    const buttonText = isLast ? "View Final Score" : "Next Question";
+
+    const optionsHTML = q.options.map((option, i) => `
+        <label>
+            <input type='radio' name='current_q' value='${option}'> ${option}
+        </label>
+    `).join('');
+
+    return `
+        <div class="question-wrapper">
+            <p>${q.question}</p>
+            <div class="options-list">
+                ${optionsHTML}
+            </div>
+            <p id='quiz-feedback' class='quiz-result'></p>
+            <button onclick="nextQuestion('${"Sun 7th December"}')">${buttonText}</button>
+        </div>
+    `;
+}
+
+// Renders the current question or the final score
+function renderQuizContent(entryDate) {
+    const state = quizState[entryDate];
+    const quizContentContainer = document.querySelector(`.entry .date[data-date='${entryDate}']`)?.nextElementSibling.querySelector('#quiz-content');
+
+    if (!quizContentContainer) return;
+
+    if (state.currentQuestionIndex < quizQuestions.length) {
+        // Display a question
+        quizContentContainer.innerHTML = getQuestionHTML(state.currentQuestionIndex);
+    } else {
+        // Display final score
+        quizContentContainer.innerHTML = `
+            <p><strong>Quiz Complete!</strong></p>
+            <p id="quiz-score">You scored ${state.score} out of ${quizQuestions.length}!</p>
+            <button onclick="restartQuiz('${entryDate}')">Play Again</button>
+        `;
+    }
+}
+
+// Checks the answer and advances the quiz
+function nextQuestion(entryDate) {
+    const state = quizState[entryDate];
+    const qIndex = state.currentQuestionIndex;
+    const q = quizQuestions[qIndex];
+
+    const quizContentContainer = document.querySelector(`.entry .date[data-date='${entryDate}']`)?.nextElementSibling;
+    const selectedOption = quizContentContainer.querySelector('input[name="current_q"]:checked');
+    const feedbackElement = quizContentContainer.querySelector('#quiz-feedback');
+
+    // 1. Check for selection
+    if (!selectedOption) {
+        feedbackElement.textContent = "Please select an answer to continue.";
+        feedbackElement.style.color = "red";
+        return;
+    }
+
+    // 2. Process answer and provide feedback
+    const userAnswer = selectedOption.value;
+    
+    if (userAnswer === q.answer) {
+        state.score++;
+        feedbackElement.textContent = "Correct!";
+        feedbackElement.style.color = "green";
+    } else {
+        feedbackElement.textContent = `Incorrect! The correct answer was: ${q.answer}`;
+        feedbackElement.style.color = "red";
+    }
+
+    // 3. Move to the next question/score after a short delay
+    state.currentQuestionIndex++;
+    
+    // Disable button temporarily to prevent double-click while waiting
+    const button = quizContentContainer.querySelector('button');
+    if (button) button.disabled = true;
+
+    setTimeout(() => {
+        renderQuizContent(entryDate);
+    }, 1200); // 1.2 second delay for the user to see the result
+}
+
+// Function to reset the quiz state and start over
+function restartQuiz(entryDate) {
+    quizState[entryDate].currentQuestionIndex = 0;
+    quizState[entryDate].score = 0;
+    renderQuizContent(entryDate);
+}
+
 // --- Render entries ---
 function renderEntries() {
   
@@ -550,6 +706,7 @@ function renderEntries() {
     const dateDiv = document.createElement("div");
     dateDiv.classList.add("date");
     dateDiv.textContent = entry.date;
+    dateDiv.setAttribute('data-date', entry.date);
 
     const contentDiv = document.createElement("div");
     contentDiv.classList.add("content");

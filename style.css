@@ -118,3 +118,48 @@ audio {
   font-style: italic;
   margin: 0 0 15px 0;  /* slightly bigger margin underneath */
 }
+/* --- Quiz Styling --- */
+.quiz-container {
+  margin-top: 10px;
+}
+
+.quiz-container p {
+  margin: 8px 0;
+}
+
+.quiz-container label {
+  display: block; /* makes each option appear on a new line */
+  margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 14px; 
+}
+
+.quiz-container input[type="radio"] {
+  margin-right: 5px;
+}
+
+.quiz-container button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 14px;
+  font-family: "Times New Roman", serif;
+  font-weight: normal; /* ensures no bolding */
+}
+
+.quiz-container button:hover {
+  background-color: #ddd;
+}
+
+.quiz-result {
+  margin: 5px 0 10px 0;
+  /* Removed font-style: italic; */
+  font-size: 14px;
+}
+
+#quiz-score {
+  margin-top: 15px;
+  font-weight: normal; /* ensures no bolding */
+}
