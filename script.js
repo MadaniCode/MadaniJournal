@@ -21,6 +21,39 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol  
 const entries = [
+                {
+                  date: "Wed 10th December",
+                  content: [
+                    "Hashim got me a mini disk and I got my lav stickers today. Sleep deprived but happy. Had a dream about magazines.",
+                    "![cutestboy](Images/lavslushphotoshop.webp)",
+                    "[https://www.lavenderslushee.com/](https://www.lavenderslushee.com/)",
+
+                  ]
+                },
+                {
+                  date: "Tue 9th December",
+                  content: [
+                    "I went into London today.",
+                    "The city is beautiful at this time of year. I visited a number of magazine outlets in search of a [032c Magazine](https://www.032c.com/) but unfortunately found nothing. (The [Outlander Magazine](https://www.instagram.com/outlandermagazine/?hl=en) blew my mind. [Nolan](https://www.instagram.com/nolangross/) showed me it last Friday too. Gorgeous use of tactile features.) I ended up getting [TYPEONE: Issue #10](https://type-01.com/typeonemagazine/) and [Sloft: Edition 8](https://sloft-magazine.myshopify.com/). I also accidentally stumbled into a [Dazed Magazine](https://www.dazeddigital.com/) launch event at [MagCulture](https://magculture.com/) in Soho. Magazines are so beautiful — the physical medium is so beautiful, books are so beautiful.",
+                    "![lundunnn](Images/london12.webp)",
+                    "Shot by [Nelia](https://www.instagram.com/nliaa.jpg/?hl=en)",
+                    "Money, money, money.",
+                    "I know very few people who aren’t damaged by money. You need to have ideas. Ideas need to be questioned with compassion, not always logic. Effort has to be put into building.",
+                    "If you don’t care about the money at all, you’re a victim; but if you care too much, you’re hindering yourself in the pursuit of building something meaningful.",
+                    "The idea is to have a balance of both. We have mouths to feed and our work needs to make money, but this is like expecting a baby to shit out gold coins. Ideas need to be fostered and treated with care, just as they need to be discarded when appropriate.",
+                    "I wish more of my friends cared less about money and more about building.",
+                  ]
+                },
+                 {
+                date: "Mon 8th December",
+                content: [
+                  "My Perfectly Imperfect Application",
+                  "I’m Madani, a 19-year-old designer from England, currently building a digital-first magazine called “Keep Magazine” with my co-founder Kenta Osborn. I lead our outreach, marketing and social media, and I handle most of the design work in Figma and Illustrator/InDesign. I recently made a reel about Perfectly Imperfect, which kind of pushed me to finally apply.",
+                  "I was previously studying graphic design at Coventry University. Leaving wasn’t easy, because I really value education, but the course stopped feeling right for me. With the declining quality of education, funding cuts, and a general sense that I wasn’t growing, I realised I need a different path. Since then, I’ve been learning through doing, building things, trying ideas, and teaching myself by working on real projects. At the moment I’m working with clients on predominantly  on UI/UX for websites and also social media/marketing strategy. ",
+                  "I’m looking for spaces where I can contribute, grow, whilst also gaining a deep understand how things actually work behind the scenes. I’d love to get to know the PI team, learn how things are done, and hopefully bring some of what I know from running Keep into the mix too.",
+                  "*ps. most random trip to the cinema ever last night. we watched the entirety of Kill Bill Vol. 1 and 2 back to back. it's amazing. the music, outfits, locations, storytelling, cinematography and everything inbetween was so well done. even the feet scenes.*"
+                ]
+                },
                {
                 date: "Sun 7th December",
                 content: [
