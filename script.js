@@ -22,6 +22,13 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
                 {
+                  date: "Fri 12th December",
+                  content: [
+                    "Will I make more money or learn more if I’m constantly stressed out? Not sure how to put into words how I'm feeling. Or I just dont want to.",
+                    "![Kendoggo](Images/IMG_8403.webp)",
+                  ]
+                }, 
+                {
                   date: "Wed 10th December",
                   content: [
                     "Hashim got me a mini disk and I got my lav stickers today. Sleep deprived but happy. Had a dream about magazines.",
