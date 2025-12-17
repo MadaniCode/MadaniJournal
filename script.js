@@ -22,6 +22,33 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
                 {
+                  date: "Tue 16th December",
+                  content: [
+                    "Stressed out and happy. Locking in this next 48 hours. Paris in March? Need friends in London, Berlin and Paris. Will live somewhere for a month. Somewhere new. I want to be scared again.",
+                    "![live by this](Images/designeroutofmusic.webp)",
+                    "Will have a plan for 2026 to show as December comes to a close. Getting things off my plate and setting other things into motion at the moment.",
+                  ]
+                },
+                {
+                  date: "Sun 14th December",
+                  content: [
+                    "Watched ['In Whose Name?'](https://en.wikipedia.org/wiki/In_Whose_Name%3F) tonight. It ties together pretty well, we all have our own dreams, no one wants to work for [Ye](https://www.youtube.com/watch?v=w9rzz4pDFwA&list=RDOH3bNgA1rkE&index=2) forever, no one has the discipline to. We all have our own wants and needs.",
+                    "And thats how we treat god.",
+                  ]
+                },
+                {
+                  date: "Fri 13th December",
+                  content: [
+                    "I’ve read this a couple times now, so I’ve actually digested it and my thoughts are clearer than usual.",
+                    "Firstly, it’s incredible to see someone piece things together in a year like this. I wonder how long he had been working on it before it all clicked. It makes me want to get my shit together. I really am sick of people telling me I’m really young. A 34 year old client told me “congratulations on being 19,” which really rubbed me the wrong way. Just because it’s okay to not have something figured out doesn’t mean it’s okay to not try and figure it out.",
+                    "This single diagram humbled me, and now my priorities before the new year are completely different. I’m going to get as much as possible off my plate. The power he gives to content is insane, but it shows in the results, especially considering this is only his first year doing this. Admirable work ethic, for real. I should also start reading books again and delegate more of my money to education, tools, and travel.",
+                    "![scary but true](Images/timecut.webp)",
+                    "The ultimate wisdom from this is that “being able to learn is the real superpower you need to have in business. It’s fine that you don’t know how to do the thing. It’s not fine that you don’t position yourself to learn the thing.”",
+                    "Thanks for the shout out, Blaze :)",
+                    "Read Blaze’s [Gravel Report](https://blazesmt.notion.site/Gravel-Report-Year-01-2bc652dcb0378010b358c8c90d205cf9) for yourself."
+                  ]
+                },
+                {
                   date: "Fri 12th December",
                   content: [
                     "Will I make more money or learn more if I’m constantly stressed out? Not sure how to put into words how I'm feeling. Or I just dont want to.",
