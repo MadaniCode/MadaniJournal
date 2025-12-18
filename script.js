@@ -22,6 +22,19 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
                 {
+                  date: "Thu 18th December",
+                  content: [
+                    "I cleared one task from my plate and got the amount of work I did last week done in one day, whilst very sick. Mind games and resistance. I really have to play my cards better.",
+                    "*Note to self: You’re anxious because you didn’t get the work done.*"
+                  ]
+                },
+                {
+                  date: "Wed 17th December",
+                  content: [
+                    "![Delia bathroom](Images/lockedin.webp)",
+                  ]
+                },
+                {
                   date: "Tue 16th December",
                   content: [
                     "Stressed out and happy. Locking in this next 48 hours. Paris in March? Need friends in London, Berlin and Paris. Will live somewhere for a month. Somewhere new. I want to be scared again.",
