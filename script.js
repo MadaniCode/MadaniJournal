@@ -22,6 +22,24 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
                 {
+                  date: "Sat 20th December",
+                  content: [
+                   "Something I want to do in 2026 is unfuck my relationship with work and leisure. They bleed into one another too much, and boundaries need to be set. Most of my time should be dedicated to my work, but boundaries must exist so I’m not having these micro-interactions with work, like opening Slack at dinner with friends. True story, by the way.",
+                    "I’m either going to the cafe to get some work done or going to the cafe to enjoy a coffee. No more “I’ll bring my laptop just in case I feel like doing some work.”",
+                    "I am obsessed. I love this more than I can imagine, but it’s taking a toll on my creativity and my ability to generate ideas quickly. I’ve seriously poisoned my time and it’s extremely disorderly. That’s one of many amendments to be made in 2026.",
+                    "'Once time is a resource to be used, you start to feel pressure, whether from external forces or from yourself, to use it well, and to berate yourself when you feel you’ve wasted it. When you’re faced with too many demands, it’s easy to assume that the only answer must be to make better use of time, by becoming more efficient, driving yourself harder, or working for longer—as if you were a machine in the Industrial Revolution—instead of asking whether the demands themselves might be unreasonable.'",
+                    "*Oliver Burkeman, Four Thousand Weeks*", 
+                    "'Work expands so as to fill the time available for its completion.'",
+                    "*C. Northcote Parkinson*",
+                  ]
+                },
+                {
+                  date: "Fri 19th December",
+                  content: [
+                    "![Fri19th](Images/Friday19th.webp)",
+                  ]
+                },
+                {
                   date: "Thu 18th December",
                   content: [
                     "I cleared one task from my plate and got the amount of work I did last week done in one day, whilst very sick. Mind games and resistance. I really have to play my cards better.",
