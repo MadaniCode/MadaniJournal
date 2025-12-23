@@ -22,6 +22,23 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
                 {
+                  date: "Tue 23rd December",
+                  content: [
+                    "![processing](Images/MOT.gif)",
+                    "*Shot by me, put together with help from Ona.*"
+                  ]
+                },
+                {
+                  date: "Mon 22nd December",
+                  content: [
+                    "Spoke with [Kim](https://www.instagram.com/p/CcQRSiqjKHe/?hl=en) last night. The portfolio doesn’t need to be ready, but it will be ready soon. New Keep interview and experience soon also. Product otw too.",
+                    "I finally have an idea for the portfolio site refresh. A Harry Potter–style gallery where each frame contains a type of work. Super grey, super visual. I’m only scared of using heavy visuals because the visuals aren’t actually that good yet. I also need to niche down. I can do so much, but what are the few things I’m best at and can provide the most value in doing?",
+                    "Found an amazing [reference](https://www.mickeyaloisio.com/projects/morning-dew#images), but I want it to be much simpler.",
+                    "Content format and script research is being done. This is a first for me, as I usually dive straight into content design. “The presentation of ideas must start in writing” is something I believe with full conviction. I need to get better at condensing my thoughts. I keep sending my mentors text walls breaking down multiple ideas, but really I should be distilling concepts one at a time.",
+                    "![Figma Screenshot1](Images/Screenshot 2025-12-22 at 23.53.20.webp)",
+                  ]
+                },
+                {
                   date: "Sat 20th December",
                   content: [
                    "Something I want to do in 2026 is unfuck my relationship with work and leisure. They bleed into one another too much, and boundaries need to be set. Most of my time should be dedicated to my work, but boundaries must exist so I’m not having these micro-interactions with work, like opening Slack at dinner with friends. True story, by the way.",
