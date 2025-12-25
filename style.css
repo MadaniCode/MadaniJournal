@@ -163,3 +163,36 @@ audio {
   margin-top: 15px;
   font-weight: normal; /* ensures no bolding */
 }
+
+/* --- Inline hover image words --- */
+.img-word {
+  position: relative;
+  cursor: pointer;
+  border-bottom: 1px dotted #bbb;
+}
+
+.img-preview {
+  position: absolute;
+  top: 0.1em;
+  left: 0;
+  width: fit-content;
+  margin: -10px 0;
+  max-width: 70vw;
+  background: #f8f8f8;
+  padding: 0;
+  border: 1.5px solid #ddd;
+  z-index: 9999;
+  pointer-events: none;
+
+
+  line-height: 0;     /* KEY */
+  font-size: 0;       /* KEY */
+}
+
+
+.img-preview img {
+  max-width: 180px;
+  height: auto;
+  margin: 0;
+  display: block;
+}

@@ -22,6 +22,12 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
                 {
+                  date: "Test",
+                  content: [
+                      "I picked up a <span class='img-word' data-img='Images/bathroomflicktragic.webp'>magazine</span> today and it reminded me why print still matters."
+                  ]
+                },
+                {
                   date: "Tue 23rd December",
                   content: [
                     "![processing](Images/MOT.gif)",
@@ -898,6 +904,91 @@ function renderEntries() {
     });
   });
 }
+
+let activePreview = null;
+let pinnedWord = null;
+
+function showPreview(word, pin = false) {
+  const imgSrc = word.dataset.img;
+  if (!imgSrc) return;
+
+  // If clicking the same word again → close
+  if (pin && pinnedWord === word) {
+    hidePreview();
+    return;
+  }
+
+  // If something else is open, clear it
+  if (activePreview) {
+    activePreview.remove();
+    activePreview = null;
+    pinnedWord = null;
+  }
+
+  const rect = word.getBoundingClientRect();
+
+  const preview = document.createElement("div");
+  preview.className = "img-preview";
+  preview.innerHTML = `<img src="${imgSrc}" />`;
+
+  preview.style.position = "fixed";
+  preview.style.top = `${rect.bottom + 8}px`;
+  preview.style.left = `${rect.left}px`;
+
+  document.body.appendChild(preview);
+
+  activePreview = preview;
+  pinnedWord = pin ? word : null;
+}
+
+function hidePreview() {
+  if (!activePreview) return;
+  activePreview.remove();
+  activePreview = null;
+  pinnedWord = null;
+}
+
+/* =========================
+   Desktop hover behaviour
+   ========================= */
+
+document.addEventListener("mouseover", (e) => {
+  const word = e.target.closest(".img-word");
+  if (!word) return;
+
+  // Don’t override a pinned preview
+  if (pinnedWord) return;
+
+  showPreview(word, false);
+});
+
+document.addEventListener("mouseout", (e) => {
+  if (!e.target.closest(".img-word")) return;
+
+  // Don’t hide if pinned
+  if (pinnedWord) return;
+
+  hidePreview();
+});
+
+/* =========================
+   Click / tap behaviour
+   ========================= */
+
+document.addEventListener("click", (e) => {
+  const word = e.target.closest(".img-word");
+
+  // Clicking on a word
+  if (word) {
+    e.stopPropagation();
+    showPreview(word, true); // pin on click
+    return;
+  }
+
+  // Clicking anywhere else closes
+  hidePreview();
+});
+
 
 renderEntries();
 
