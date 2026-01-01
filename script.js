@@ -22,9 +22,68 @@ marked.setOptions({ renderer });
 // --- Blog entries data --- lol  
 const entries = [
                 {
-                  date: "Test",
+                  date: "Wed 31st December",
                   content: [
-                      "I picked up a <span class='img-word' data-img='Images/bathroomflicktragic.webp'>magazine</span> today and it reminded me why print still matters."
+                    "![Figma Screenshot1](Images/aboutsection.webp)",
+                    "A new year. I’m writing this an <span class='img-word' data-img='Images/hourb4.webp'>hour before midnight.</span>",
+                    "I’m actually exhausted. I spent the last few days working on my [portfolio website](https://www.madanidesign.com) and I think it’s a much needed upgrade. I didn’t end up going with the <span class='img-word' data-img='Images/galleryref.webp'>design I previously talked about.</span>",
+                    "Goals are weird. Once you quantify them, you can’t account for quality as easily.",
+                    "So much happened this year. I worked with people I’ve admired for a long time. I became a much better designer. I expanded and refined my skill set. I attended university and <span class='img-word' data-img='Images/drop out.webp'>dropped out</span>. I learned how to make money on the internet. I found a sense of direction. I learned what freedom is. I learned that I’m tainted like everyone else. I made new friends. I had good clients and bad ones. I spent way too much money on coffee. I got <span class='img-word' data-img='Images/fired25.webp'>fired</span> and found a <span class='img-word' data-img='Images/new job.webp'>new job.</span>. I <span class='img-word' data-img='Images/1000052832.webp'>travelled alone</span> for the first time. I took more pictures than ever. I got into a relationship and broke up. I quit projects and started new ones, namely <span class='img-word' data-img='Images/KeepCover.webp'>Keep Magazine</span>. I also wasted an enormous amount of time on things that didn’t bring me monetary success or personal fulfilment.",
+                    "Amazing friends make it easier to stay on track. I could do it without them, but it wouldn’t be the same. <span class='img-word' data-img='Images/madanivision25.webp'>Everything I do</span> is with and for people. We are life and that’s what makes it worthwhile.",
+                    "I’ve set <span class='img-word' data-img='Images/setgoals.webp'>goals</span>. I’ve become busier than ever. But I have a foothold on my practice, for now.",
+                    "This has been a year where I gradually became more emotionless, more dull, but none of that is visible in my work. If anything, I’m producing my best work right now.",
+                    "<span class='img-word' data-img='Images/keep25.webp'>Keep turns one year old tomorrow.</span>",
+                    "<span class='img-word' data-img='Images/beardedmadani.webp'>Next year I'm 20.</span> God.",
+                    "Travelling. Internship. Editorial. Publishing. Content design. Getting famous and rich.",
+                    "Leaving uni felt like a pact with myself. A promise that I’d prove I can learn and put in the hours without an external structure imposed by a traditional educator. Next year will be about showing my current self that his future self deserved the belief that this is possible, so long as he pictures it and follows through with dedication, focused action and iterative repetition.",
+                    "I have so many people around me landing insane opportunities just by putting themselves out there. It’s my turn now. I know they need me.",
+                    "Also man, I keep doing this thing where I put myself down to get up. I was on a VC with Kenta and told him I’d move to Estonia in a heartbeat and pay Racer just to let me sit in their offices.",
+                    "Anyway, January 1st is just another tomorrow. It’s been a great year. We let some of it slip away. Let’s reel it in for this next one.",
+                    "It's taken me an hour to write this and get all the images in. It's midnight now and I can hear the fireworks. <span class='img-word' data-img='Images/goodngihtt.webp'>Goodnight.</span>"
+                  ]
+                },
+                {
+                  date: "Mon 29th December",
+                  content: [
+                        "- Secure an editorial role or internship (London, Berlin, or Paris).",
+                        "- Focus my practice on content design, web design, and editorial / art direction.",
+                        "- Complete 12 strong projects (one per month).",
+                        "- Keep working with Shovel as long as possible and treat it as paid education.",
+                        "- Replace every current portfolio project with something better.",
+                        "- Release one major Keep project (book or magazine).",
+                        "- Complete 10 interviews for Keep.",
+                        "- Get genuinely fluent in Figma.",
+                        "- Improve video direction and editing in Premiere and After Effects.",
+                        "- Publish 2 reels per week, consistently.",
+                        "- Publish 6 long-form pieces across the year.",
+                        "- Maintain regular blog documentation (15–20 entries per month).",
+                        "- Turn blog thinking into short-form content instead of letting it sit.",
+                        "- Save min £300 every month.",
+                        "- Spend 1–1.5 months in at least two design-centric cities.",
+                        "- Be in London regularly, even when it costs money.",
+                        "- Aim for 2–4 design events per month on average (talks, launches, studio visits, exhibitions).",
+                        "- Put myself in rooms where people are better than me.",
+                        "- Complete 5 collaborations with people from my list of 50 future collaborators."
+                  ]
+                },
+                {
+                  date: "Mon 28th December",
+                  content: [
+                      "![new room, this was actaully shot on new years](Images/newroom.webp)",
+                  ]
+                },
+                {
+                  date: "Sat 27th December",
+                  content: [
+                      "Testing a new feature: I picked up a <span class='img-word' data-img='Images/spread1.webp'>magazine</span> today and it reminded me why print still matters.",
+                      "Images and words are so intertwined, I cant see them, but I can feel them so my only closure is in telling you about them.",
+                  ]
+                },
+                 {
+                  date: "Fri 26th December",
+                  content: [
+                        "We’re still trying to fill the creative talent gap Steve Jobs left behind.",
+                       "Delusional in prayer."
                   ]
                 },
                 {
@@ -907,87 +966,98 @@ function renderEntries() {
 
 let activePreview = null;
 let pinnedWord = null;
+let activeWord = null;
+
+function positionPreview() {
+  if (!activePreview || !activeWord) return;
+
+  const rect = activeWord.getBoundingClientRect();
+
+  // anchor to the word in *document* space (so scrolling keeps it “attached”)
+  const top = rect.bottom + 8 + window.scrollY;
+  const left = rect.left + window.scrollX;
+
+  activePreview.style.top = `${top}px`;
+  activePreview.style.left = `${left}px`;
+}
 
 function showPreview(word, pin = false) {
   const imgSrc = word.dataset.img;
   if (!imgSrc) return;
 
-  // If clicking the same word again → close
+  // Clicking the same word again → close
   if (pin && pinnedWord === word) {
     hidePreview();
     return;
   }
 
-  // If something else is open, clear it
-  if (activePreview) {
-    activePreview.remove();
-    activePreview = null;
-    pinnedWord = null;
-  }
+  // Clear any existing preview
+  hidePreview();
 
-  const rect = word.getBoundingClientRect();
+  activeWord = word;
 
   const preview = document.createElement("div");
   preview.className = "img-preview";
-  preview.innerHTML = `<img src="${imgSrc}" />`;
+  preview.innerHTML = `<img src="${imgSrc}" alt="">`;
 
-  preview.style.position = "fixed";
-  preview.style.top = `${rect.bottom + 8}px`;
-  preview.style.left = `${rect.left}px`;
+  // IMPORTANT: absolute, not fixed
+  preview.style.position = "absolute";
 
   document.body.appendChild(preview);
-
   activePreview = preview;
+
+  // Pin state
   pinnedWord = pin ? word : null;
+
+  // Place it immediately
+  positionPreview();
 }
 
 function hidePreview() {
-  if (!activePreview) return;
-  activePreview.remove();
+  if (activePreview) activePreview.remove();
   activePreview = null;
   pinnedWord = null;
+  activeWord = null;
 }
 
-/* =========================
-   Desktop hover behaviour
-   ========================= */
-
+/* Desktop hover */
 document.addEventListener("mouseover", (e) => {
   const word = e.target.closest(".img-word");
   if (!word) return;
-
-  // Don’t override a pinned preview
-  if (pinnedWord) return;
-
+  if (pinnedWord) return; // don’t override pinned
   showPreview(word, false);
 });
 
 document.addEventListener("mouseout", (e) => {
   if (!e.target.closest(".img-word")) return;
-
-  // Don’t hide if pinned
-  if (pinnedWord) return;
-
+  if (pinnedWord) return; // don’t hide if pinned
   hidePreview();
 });
 
-/* =========================
-   Click / tap behaviour
-   ========================= */
-
+/* Click / tap */
 document.addEventListener("click", (e) => {
   const word = e.target.closest(".img-word");
 
-  // Clicking on a word
   if (word) {
     e.stopPropagation();
     showPreview(word, true); // pin on click
     return;
   }
 
-  // Clicking anywhere else closes
-  hidePreview();
+  hidePreview(); // click outside closes
 });
+
+/* Keep it attached while scrolling/resizing */
+window.addEventListener("scroll", () => {
+  if (!activePreview) return;
+  positionPreview();
+}, { passive: true });
+
+window.addEventListener("resize", () => {
+  if (!activePreview) return;
+  positionPreview();
+});
+
 
 
 renderEntries();
