@@ -21,6 +21,14 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol  
 const entries = [
+                  {
+                  date: "Thu 1st January",
+                  content: [
+                    "The only real difference between me and my peers is a gap in fear and belief. I don’t think I spoke about it enough yesterday.",
+                    "I need to prioritise myself. Maybe it was my upbringing, my family, or my friends, but I’ve caught this contagious mindset that places barriers between what is and what isn’t possible based on where I’ve come from rather than what I’ve built.",
+                    "These barriers are often the deciding factor in whether or not I try at all. Whether I send a DM, an email, apply for a role, ask a question, or go to an event."
+                  ]
+                },
                 {
                   date: "Wed 31st December",
                   content: [
