@@ -21,6 +21,38 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol  
 const entries = [
+                      {
+                      date: "Tue 7th January",
+                      content: [
+                        "Wasted hours, sleep means so much.",
+                        "Taking a break from working with Shovel for now, learnt so much in a short amount of time.",
+                      ]
+                    },
+                    {
+                      date: "Mon 6th January",
+                      content: [
+                        "SCRIPT SCRIPT SCRIPT",
+                        "![pilot hype](Images/IMG_9162.webp)",
+                        "[Pilot](https://pilotmagazine.uk/) announced [Issue 6](https://www.instagram.com/p/DTLMEU2kbPv/) and launch events across 4 cities which is insane, going to try pull up to the London one.",
+                      ]
+                    },
+                    {
+                    date: "Sat 4th January",
+                    content: [
+                      "Posted a reel about <span class='img-word' data-img='Images/sexmag.webp'>Sex Magazine</span> and <span class='img-word' data-img='Images/lolainterview.webp'>Lola’s interview format</span>! They responded and are sending me a free copy which is insane, doubling down now for sure. My current issue is ideas for scripts but I'm also conscious that I'm being extremely picky for no reason, I need to have tolerance for this.",
+                      "Super generous of them. Also, I want to get hired at <a href='https://trickstermagazine.com/' target='_blank'>Trickster Magazine</a>. An internship would be cool, but a content design role would be amazing. I don’t think they’re hiring at the moment, but I’ll be reaching out shortly...",
+                      "Trickster has released one of my favourite <a href='https://trickstermagazine.com/articles/techne/mihhail-zigadlo-has-no-speed-limits?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGntECp3bfwKUCKT3Yu-rjfdinfmyKHF7_hoY_gBQMf2FneWhO8maezPd4JLak_aem__HPFTIvZphTJjvKMkniKhA' target='_blank'>designed spreads and interview</a> to date from them.",
+                      "![Trickster Magazine Spread with mihhail zigadlo](Images/tricksterspread.webp)",
+                    ]
+                  },
+                  {
+                    date: "Thu 2nd January",
+                    content: [
+                      "You can’t even run away from your problems anymore.",
+                      "They’re all in your pocket.",
+                      "They aren’t tied to a physical location anymore."
+                    ]
+                  },
                   {
                   date: "Thu 1st January",
                   content: [
