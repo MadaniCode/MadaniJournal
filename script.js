@@ -27,6 +27,13 @@ const entries = [
                         "![sauce](Images/IMG_9502.webp)",
                       ]
                     },
+                   {
+                      date: "Sat 17th January",
+                      content: [
+                        "went to the pilot event.",
+                        
+                      ]
+                    },
                           {
                           date: "Thu 16th January",
                           content: [
