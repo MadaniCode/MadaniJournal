@@ -21,6 +21,48 @@ marked.setOptions({ renderer });
 
 // --- Blog entries data --- lol  
 const entries = [
+                    {
+                      date: "Sun 18th January",
+                      content: [
+                        "![sauce](Images/IMG_9502.webp)",
+                      ]
+                    },
+                          {
+                          date: "Thu 16th January",
+                          content: [
+                            "Heliot Emil and Rains have some of the most tactile videos right now. With physical media making a resurgence, there’s a large audience who consume it like print porn as opposed to actually owning the print. I think Rains picked up on this quite early with their sticker packs and these styling videos.",
+                            "It itches a place where you don’t need to own it to be part of it, but it tricks you into consuming the clothes and the Rains world simply because of how entertaining the idea is. From changing clothes on Barbie dolls to customising your Sims character, we’ve all encountered this idea of customisation in some form. Rains took this familiar concept, made it tactile, and based it entirely within their own world.",
+                            "Heliot Emil feels more traditional and print-focused. From showing the creation of the advent calendar itself to doing daily reveals and styling, there’s a clear curiosity gap being created. The use of translucent materials pushes it closer to being considered print porn.",
+                            "I think there’s also something to be said about deconstruction. I came across this restock graphic by Racer Worldwide for their shoe made in collaboration with New Rock. They laid out the pieces of the shoe using subliminal messaging to signal quality, construction, and intricacy."
+                          ]
+                        },
+                        {
+                        date: "Tue 13th January",
+                        content: [
+                          "Margiela project is back on the road.",
+                          "\"The goal with this project is to educate first and foremost. A resource that goes beyond what is available in any one place right now. We will define a threshold of what is already written about in length and only hyperlink/provide access to.\"",
+                          "I will curate shows, provide research, and design + develop the site.",
+                          "In conjunction with Sam, we will provide speaking notes on things like:",
+                          "- Show descriptions / climate",
+                          "- Timely context",
+                          "- Public perception and reception of the show",
+                          "I'm hoping Sam can be an interpreter of sorts in defining the narrative based on the research as he’s been enveloped in the Margiela world for so long now.",
+                          "Lmk if you have any questions.",
+                          "It’s a busy time for me and I’m sure you guys have been caught off guard by this too. Don’t feel like you need to respond in a timely manner at all.",
+                          "This first section of the project is very much on my shoulders.\""
+                        ]
+                      },
+                      {
+                        date: "Wed 11th January",
+                        content: [
+                          "Ona made this",
+                          "![ona print](Images/onamadethis.webp)",
+                          "Finally bought a printer. I’m not sure if I'm being frugal or just a delayed decision maker but I’ve been plotting on it for months. I knew that once I dropped out, I wouldn’t have access to the university printers.",
+                          "My issue at the moment is scripting, I can produce a reel in 3–4 hours but scripting and research seem to take forever. There is definitely a fear of even approaching certain ideas that I need to get over. “This isn’t what I do” is how I react when a concept for a script is even slightly outside my comfort zone.",
+                          "I’ve noticed my design observations slowing down but my mind was sort of preoccupied with other things. I’m increasing my hours at job </3",
+                          "I know my brain is overwhelmed when I start forgetting things and making my ToDo list incorrectly."
+                        ]
+                      },
                       {
                       date: "Tue 7th January",
                       content: [
