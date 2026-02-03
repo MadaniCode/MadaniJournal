@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SHIPTON — Exhibitions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --text: #1f120c;
+      --bg: #ffffff;
+      --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --header-h: 120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+    .landing {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+    /* background image */
+    .landing::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: var(--image);
+      background-size: cover;
+      background-position: center;
+      z-index: -2;
+    }
+
+    /* soft overlay, same language as exhibitions */
+    .landing::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.15);
+      z-index: -1;
+    }
+
+
+    /* ================= HEADER ================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--header-h);
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      pointer-events: none;
+      background: transparent;
+    }
+
+    header {
+      background: transparent;
+      transition: background 0.3s ease;
+    }
+
+    header.with-fade {
+      background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,1) 0%,
+        rgba(255,255,255,0.9) 55%,
+        rgba(255,255,255,0) 100%
+      );
+    }
+
+
+
+    header * {
+      pointer-events: auto;
+    }
+
+    .logo {
+      font-family: var(--sans);
+      font-size: 14px;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .pill {
+      padding: 8px 14px;
+      border: 1.5px dashed currentColor;
+      border-radius: 999px;
+      background: #fff;
+      font-size: 12px;
+      text-decoration: none;
+      color: inherit;
+      font-family: var(--sans);
+      letter-spacing: -0.01em;
+      transition: transform 0.2s ease;
+    }
+
+    .pill:hover {
+      transform: translateY(-1px);
+    }
+
+    /* ================= LIST ================= */
+
+    main {
+      padding-top: 0;
+    }
+
+    .exhibition {
+      position: relative;
+      height: 60vh;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 48px;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+    }
+
+    .exhibition::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: var(--image);
+      background-size: cover;
+      background-position: center;
+      opacity: 0.6;
+      filter: saturate(0.95) contrast(0.95);
+      transition: opacity 0.35s ease, filter 0.35s ease;
+      z-index: -2;
+    }
+
+    .exhibition::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(255,255,255,0.25);
+      z-index: -1;
+    }
+    .exhibition:first-of-type {
+      margin-top: -1px;
+    }
+
+
+
+    .desc {
+      max-width: 32ch;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .desc h2 {
+      font-family: var(--sans);
+      letter-spacing: -0.02em;
+      font-size: 1.1rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .meta {
+      text-align: right;
+      max-width: 28ch;
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .number {
+      font-family: var(--sans);
+      font-size: clamp(6rem, 18vw, 14rem);
+      line-height: 1;
+      letter-spacing: -0.04em;
+      transition: transform 0.3s ease;
+    }
+
+    .exhibition:hover .number {
+      transform: scale(1.04);
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 900px) {
+  header {
+    position: fixed; /* 🔑 THIS is the fix */
+    background: linear-gradient(
+      to bottom,
+      rgba(255,255,255,1) 0%,
+      rgba(255,255,255,0.85) 60%,
+      rgba(255,255,255,0) 100%
+    );
+  }
+
+  main {
+    padding-top: 0;
+  }
+
+  .landing {
+    height: 100vh; /* full bleed, no subtraction */
+  }
+
+  .exhibition {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .meta,
+  .desc {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="/Yeah/works.html" class="logo">SHIPTON</a>
+  <nav class="top-actions">
+    <a href="/Yeah/about.html" class="pill">About</a>
+    <a href="/Yeah/press.html" class="pill">Press</a>
+    <a href="/Yeah/friends.html" class="pill">Friends</a>
+  </nav>
+</header>
+
+<main>
+  <section class="landing"
+   style="--image:url('/Yeah/Images/Landing1.webp')">
+  </section>
+
+
+  <!-- EXHIBITION 01 -->
+    <a class="exhibition"
+      href="exhibitions/not-a-threat.html"
+      style="--image:url('/Yeah/Images/ThreatCover.webp')">
+    <div class="desc">
+      <h2>Not A Threat, A Promise</h2>
+      <p>Anna-Lena Krause, Jessica Luostarinen & Kit Reynolds</p>
+      <p>10.07.25 – 02.08.25</p>
+    </div>
+
+    <div class="number">(01)</div>
+
+    <div class="meta">
+      <p>Group Exhibition</p>
+    </div>
+  </a>
+
+  <!-- EXHIBITION 02 -->
+  <a class="exhibition"
+     href="exhibitions/juvenile.html"
+     style="--image:url('/Yeah/Images/JuvenileCover.webp')">
+    <div class="desc">
+      <h2>Juvenile</h2>
+      <p>Derrelle Elijah, Sam Hutchinson & Charlie Tallott</p>
+      <p>06.06.25 – 28.06.25</p>
+    </div>
+
+    <div class="number">(02)</div>
+
+    <div class="meta">
+      <p>Group Exhibition</p>
+    </div>
+  </a>
+
+  <!-- EXHIBITION 03 -->
+  <a class="exhibition"
+     href="exhibitions/hinterland.html"
+     style="--image:url('/Yeah/Images/HinterlandCover.webp')">
+    <div class="desc">
+      <h2>Hinterland</h2>
+      <p>Olivia Bryant, Elizabeth Dimitroff, Wenhui Hao & Jack Whitelock</p>
+      <p>18.04.25 – 17.05.25</p>
+    </div>
+
+    <div class="number">(03)</div>
+
+    <div class="meta">
+      <p>Group Exhibition</p>
+    </div>
+  </a>
+
+  <!-- EXHIBITION 04 -->
+  <a class="exhibition"
+     href="exhibitions/no-destination.html"
+     style="--image:url('/Yeah/Images/NoDestinationCover.webp')">
+    <div class="desc">
+      <h2>No Destination</h2>
+      <p>Rebecca Foster-Clarke</p>
+      <p>14.03.25 – 12.04.25</p>
+    </div>
+
+    <div class="number">(04)</div>
+
+    <div class="meta">
+      <p>Solo Exhibition</p>
+    </div>
+  </a>
+
+</main>
+
+</body>
+
+</html>

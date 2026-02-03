@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Press — SHIPTON</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --text: #1f120c;
+      --bg: #ffffff;
+      --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --header-h: 120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--header-h);
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      pointer-events: none;
+      background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,1) 0%,
+        rgba(255,255,255,0.9) 55%,
+        rgba(255,255,255,0) 100%
+      );
+    }
+
+    header * {
+      pointer-events: auto;
+    }
+
+    .logo {
+      font-family: var(--sans);
+      font-size: 14px;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .pill {
+      padding: 8px 14px;
+      border: 1.5px dashed currentColor;
+      border-radius: 999px;
+      background: #fff;
+      font-size: 12px;
+      text-decoration: none;
+      color: inherit;
+      font-family: var(--sans);
+    }
+
+    .pill.active {
+      background: currentColor;
+      color: #fff;
+      border-style: solid;
+    }
+
+    /* ================= LAYOUT ================= */
+
+    main {
+      padding-top: var(--header-h);
+      padding-left: 48px;
+      padding-right: 48px;
+    }
+
+    .title {
+      font-family: var(--sans);
+      font-size: clamp(4.5rem, 10vw, 8rem);
+      letter-spacing: -0.04em;
+      line-height: 0.95;
+      margin-bottom: 64px;
+    }
+
+    /* SAME GRID AS ABOUT */
+    .press-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      max-width: 1100px;
+    }
+
+    .press-grid p {
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 40ch;
+    }
+
+    .press-grid strong {
+      font-family: var(--sans);
+      font-weight: normal;
+      font-size: 13px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .press-grid a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .press-grid a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 64px 48px;
+      font-size: 12px;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 900px) {
+      header {
+        position: sticky;
+        background: linear-gradient(
+          to bottom,
+          rgba(255,255,255,1) 0%,
+          rgba(255,255,255,0.85) 60%,
+          rgba(255,255,255,0) 100%
+        );
+      }
+
+      main {
+        padding: 32px;
+      }
+
+      .title {
+        font-size: 3rem;
+        margin-bottom: 40px;
+      }
+
+      .press-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="/Yeah/works.html" class="logo">SHIPTON</a>
+  <nav class="top-actions">
+    <a href="/Yeah/about.html" class="pill">About</a>
+    <a href="/Yeah/press.html" class="pill active">Press</a>
+    <a href="/Yeah/friends.html" class="pill">Friends</a>
+  </nav>
+</header>
+
+<main>
+
+  <h1 class="title">(Press)</h1>
+
+  <section class="press-grid">
+
+    <p>
+      <strong>Numéro Berlin</strong>
+      <a href="https://www.numeroberlin.de/2025/08/anna-lena-krause-jessica-luostarinen-not-a-threat-a-promise/" target="_blank">
+        Not A Threat, A Promise
+      </a>
+    </p>
+
+    <p>
+      <strong>Dazed</strong>
+      <a href="https://www.dazeddigital.com/art-photography/article/65731/1/exhibition-catholicism-queer-iconography-lily-bloom-london-isabella-greenwood" target="_blank">
+        God Willing
+      </a>
+    </p>
+
+    <p>
+      <strong>Wallpaper*</strong>
+      <a href="https://www.wallpaper.com/art/wallpaper-editors-picks-8-14-dec" target="_blank">
+        God Willing
+      </a>
+    </p>
+
+    <p>
+      <strong>Ofluxo</strong>
+      <a href="https://www.ofluxo.net/god-willing-group-show-curated-by-isabella-greenwood-shipton-london/" target="_blank">
+        God Willing
+      </a>
+    </p>
+
+    <p>
+      <strong>Aa Magazine</strong>
+      <a href="https://doubleamagazine.com/vigil-death-detachment-and-the-art-of-letting-go/" target="_blank">
+        Vigil: Death & The Afterlife
+      </a>
+    </p>
+
+    <p>
+      <strong>Glamcult</strong>
+      <a href="https://www.glamcult.com/articles/vigil-death-and-the-afterlife-at-semester9/" target="_blank">
+        Vigil: Death & The Afterlife
+      </a>
+    </p>
+
+    <p>
+      <strong>Plaster</strong>
+      <a href="https://plastermagazine.com/articles/gore-art-trend-piece/" target="_blank">
+        Careful The Tale You Tell
+      </a>
+    </p>
+
+  </section>
+
+</main>
+
+<footer>© SHIPTON</footer>
+
+</body>
+</html>

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Not A Threat, A Promise — SHIPTON</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    :root {
+      --text: #1f120c;
+      --bg: #ffffff;
+      --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      --header-h: 120px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow: hidden;
+    }
+
+    /* ================= HEADER ================= */
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: var(--header-h);
+      padding: 24px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 100;
+      pointer-events: none;
+      background: linear-gradient(
+        to bottom,
+        rgba(255,255,255,1) 0%,
+        rgba(255,255,255,0.9) 55%,
+        rgba(255,255,255,0) 100%
+      );
+    }
+
+    header * {
+      pointer-events: auto;
+    }
+
+    .logo {
+      font-family: var(--sans);
+      font-size: 14px;
+      letter-spacing: -0.02em;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .top-actions {
+      display: flex;
+      gap: 12px;
+    }
+
+    .pill {
+      padding: 8px 14px;
+      border: 1.5px dashed currentColor;
+      border-radius: 999px;
+      background: #fff;
+      font-size: 12px;
+      text-decoration: none;
+      color: inherit;
+      font-family: var(--sans);
+    }
+
+    /* ================= SPLIT LAYOUT ================= */
+
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 100vh;
+    }
+
+    .image-column,
+    .text-column {
+      height: 100vh;
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      padding-top: var(--header-h);
+    }
+
+    /* ================= IMAGES ================= */
+
+    .image-column {
+      padding-left: 32px;
+      padding-right: 32px;
+      padding-bottom: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 48px;
+    }
+
+    .image-column img {
+      width: 100%;
+      display: block;
+      border-radius: 6px;
+    }
+
+    figcaption {
+      font-size: 12px;
+      line-height: 1.4;
+      margin-top: 8px;
+    }
+
+    /* ================= TEXT ================= */
+
+    .text-column {
+      padding-left: 48px;
+      padding-right: 48px;
+      padding-bottom: 48px;
+    }
+
+    .title {
+      font-family: var(--sans);
+      font-size: clamp(4.5rem, 10vw, 8rem);
+      line-height: 0.95;
+      letter-spacing: -0.04em;
+      margin-bottom: 24px;
+    }
+
+    .subtitle {
+      font-size: 14px;
+      margin-bottom: 32px;
+    }
+
+    .section {
+      max-width: 52ch;
+      font-size: 14px;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .section h3 {
+      font-family: var(--sans);
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    footer {
+      padding: 64px;
+      font-size: 12px;
+    }
+
+    /* ================= MOBILE ================= */
+
+    @media (max-width: 900px) {
+      body {
+        overflow: auto;
+      }
+
+      header {
+        position: sticky;
+        background: linear-gradient(
+          to bottom,
+          rgba(255,255,255,1) 0%,
+          rgba(255,255,255,0.85) 60%,
+          rgba(255,255,255,0) 100%
+        );
+      }
+
+      main {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .text-column {
+        order: 1;
+        height: auto;
+        overflow: visible;
+        padding: 32px;
+      }
+
+      .image-column {
+        order: 2;
+        height: auto;
+        overflow: visible;
+        padding: 32px;
+      }
+
+      .title {
+        font-size: 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="../works.html" class="logo">SHIPTON</a>
+  <nav class="top-actions">
+    <a href="../about.html" class="pill">About</a>
+    <a href="../press.html" class="pill">Press</a>
+    <a href="../friends.html" class="pill">Friends</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- LEFT: IMAGES -->
+  <section class="image-column">
+
+    <figure><img src="../images/Threat1.webp"><figcaption>Jessica Luostarinen, <em>Preparation</em>, 30 × 30 × 4 cm, Oil on canvas, 2025</figcaption></figure>
+    <figure><img src="../images/Threat2.webp"><figcaption>Jessica Luostarinen, <em>Chestplate</em>, 30 × 30 × 4 cm, Oil on canvas, 2025</figcaption></figure>
+    <figure><img src="../images/Threat3.webp"><figcaption>Kit Reynolds, <em>Untitled (Armour Study)</em>, 160 × 90 cm, Oil on canvas, 2025</figcaption></figure>
+    <figure><img src="../images/Threat4.webp"><figcaption>Jessica Luostarinen, <em>Fitting</em>, 91.5 × 81.5 × 2 cm, Acrylic on canvas, 2024</figcaption></figure>
+    <figure><img src="../images/Threat5.webp"><figcaption>Kit Reynolds, <em>Forever Blowing Bubbles</em>, 35 × 25.5 cm, Oil on canvas, 2025</figcaption></figure>
+    <figure><img src="../images/Threat6.webp"><figcaption>Kit Reynolds, <em>Something Inside, So Strong</em>, 35 × 25.5 cm, Oil on canvas, 2025</figcaption></figure>
+    <figure><img src="../images/Threat7.webp"><figcaption>Jessica Luostarinen, <em>Fitting – 3</em>, 110 × 140 × 4 cm, Oil on canvas, 2025</figcaption></figure>
+    <figure><img src="../images/Threat8.webp"><figcaption>Jessica Luostarinen, <em>Helm</em>, 30 × 20 × 4 cm, Oil on canvas, 2025</figcaption></figure>
+    <figure><img src="../images/Threat9.webp"><figcaption>Anna-Lena Krause, <em>The Shape of the Space Between Us (I)</em>, Resin, concrete plinth, 62 × 25 × 27 cm, 2025</figcaption></figure>
+    <figure><img src="../images/Threat10.webp"><figcaption>Anna-Lena Krause, <em>The Shape of the Space Between Us (II)</em>, Resin, concrete plinth, 64 × 25 × 26 cm, 2025</figcaption></figure>
+
+  </section>
+
+  <!-- RIGHT: TEXT -->
+  <section class="text-column">
+
+    <h1 class="title">Not A Threat,<br>A Promise</h1>
+
+    <p class="subtitle">
+      Anna-Lena Krause, Jessica Luostarinen & Kit Reynolds<br>
+      10.07.25 – 02.08.25
+    </p>
+
+    <div class="section">
+      <p>
+        Shipton is pleased to present the group exhibition,
+        <em>Not A Threat, A Promise</em>, featuring works by
+        Anna-Lena Krause, Jessica Luostarinen & Kit Reynolds.
+      </p>
+    </div>
+
+    <div class="section">
+      <h3>Get Ready With Me To Become A Martyr</h3>
+      <p><em>Text by Olivia Allen</em></p>
+
+      <p>No alarm, but time is a construct, especially when you’re about to get your head chopped off. The best I can do is bang my head against the pillow a few times and hope for the best. Luckily, someone’s on my side and I’m up and at them before they can string a noose around my neck or tie the ropes around my wrists. Let the daylight in, I’m saving the diving intervention for later.</p>
+
+      <p>Eyes open and out of bed (or whatever we’re calling this wooden plank I’ve been resting my weary head on). Time to seize the day, carpe diem and all that, a public execution never got in the way of a good get-ready with me.</p>
+
+      <p>Minimal make-up for today. The restrictive diet has really made my skin glow.</p>
+
+      <p>Layers are key.</p>
+
+      <p>Silk is out.</p>
+
+      <p>What about armour?</p>
+
+      <p>Time for shoes, something sensible.</p>
+
+      <p>A knock on the door. Showtime!</p>
+    </div>
+
+  </section>
+
+</main>
+
+<footer>© SHIPTON</footer>
+
+</body>
+</html>
