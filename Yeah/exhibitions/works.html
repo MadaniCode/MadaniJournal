@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>SHIPTON — Exhibitions</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<style>
+:root {
+  --text: #1f120c;
+  --bg: #ffffff;
+  --sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: serif;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* ================= HEADER ================= */
+
+Yeah/works.html
+/* ================= LANDING ================= */
+
+.landing {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.45),
+    rgba(0,0,0,0.05)
+  );
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 120px;
+  right: 48px;
+  text-align: right;
+  color: #fff;
+  z-index: 3;
+  max-width: 420px;
+}
+
+.slide-title {
+  font-family: var(--sans);
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  letter-spacing: -0.06em;
+  line-height: 0.95;
+}
+
+.controls {
+  position: absolute;
+  bottom: 32px;
+  right: 32px;
+  display: flex;
+  gap: 12px;
+  z-index: 5;
+}
+
+.arrow {
+  padding: 8px 18px;
+  border: 1.5px dashed rgba(255,255,255,0.85);
+  border-radius: 999px;
+  background: rgba(0,0,0,0.35);
+  backdrop-filter: blur(10px);
+  color: #fff;
+  font-family: var(--sans);
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.arrow:hover {
+  background: rgba(0,0,0,0.5);
+  transform: translateY(-1px);
+}
+
+/* ================= EXHIBITIONS ================= */
+
+.exhibitions {
+  padding: 140px 48px 100px;
+}
+
+.section-title {
+  font-family: var(--sans);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  margin-bottom: 60px;
+}
+
+.exhibit {
+  border-top: 1px dashed rgba(0,0,0,0.25);
+  padding: 28px 0;
+  cursor: pointer;
+  transition: background 0.25s ease;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.exhibit:last-child {
+  border-bottom: 1px dashed rgba(0,0,0,0.25);
+}
+
+.exhibit.visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.exhibit:hover {
+  background: rgba(0,0,0,0.02);
+}
+
+.exhibit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.exhibit-number {
+  font-family: var(--sans);
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  transition: transform 0.35s ease;
+}
+
+.exhibit-title {
+  font-family: var(--sans);
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.exhibit.open .exhibit-number {
+  transform: translateX(8px);
+}
+
+/* body */
+
+.exhibit-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.45s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+.exhibit.open .exhibit-body {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.exhibit-body-inner {
+  padding-top: 18px;
+  font-size: 14px;
+  line-height: 1.5;
+  max-width: 520px;
+}
+
+/* Horizontal scroll gallery */
+
+.gallery {
+  margin-top: 18px;
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+}
+
+.gallery::-webkit-scrollbar {
+  display: none;
+}
+
+.gallery img {
+  height: 120px;
+  width: auto;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.view-button {
+  margin-top: 18px;
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  border-bottom: 1px solid currentColor;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+  padding: 80px 48px;
+  border-top: 1px dashed rgba(0,0,0,0.25);
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+footer strong {
+  font-family: var(--sans);
+  font-weight: 700;
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+  header { padding: 24px; }
+
+  .slide-content { bottom: 80px; right: 24px; }
+
+  .controls { bottom: 20px; right: 20px; }
+
+  .exhibitions { padding: 120px 24px 80px; }
+
+  .exhibit-title { font-size: 18px; }
+
+  .exhibit-number { font-size: 38px; }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="/Yeah/works.html" class="logo">SHIPTON</a>
+  <nav class="top-actions">
+    <a href="/Yeah/about.html">About</a>
+    <a href="/Yeah/press.html">Press</a>
+    <a href="/Yeah/friends.html">Friends</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="landing">
+
+<a href="exhibitions/not-a-threat.html" class="slide active"
+style="background-image:url('/Yeah/Images/ThreatCover.webp')">
+  <div class="slide-content">
+    <div class="slide-title">Not A Threat, A Promise</div>
+  </div>
+</a>
+
+<a href="exhibitions/juvenile.html" class="slide"
+style="background-image:url('/Yeah/Images/JuvenileCover.webp')">
+  <div class="slide-content">
+    <div class="slide-title">Juvenile</div>
+  </div>
+</a>
+
+<a href="exhibitions/hinterland.html" class="slide"
+style="background-image:url('/Yeah/Images/HinterlandCover.webp')">
+  <div class="slide-content">
+    <div class="slide-title">Hinterland</div>
+  </div>
+</a>
+
+<div class="controls">
+  <button class="arrow prev">&larr;</button>
+  <button class="arrow next">&rarr;</button>
+</div>
+
+</section>
+
+<section class="exhibitions">
+
+<div class="section-title">Exhibitions</div>
+
+<!-- 01 -->
+<div class="exhibit">
+  <div class="exhibit-header">
+    <div class="exhibit-number">(01)</div>
+    <div class="exhibit-title">Not A Threat, A Promise</div>
+  </div>
+  <div class="exhibit-body">
+    <div class="exhibit-body-inner">
+      Anna-Lena Krause, Jessica Luostarinen & Kit Reynolds<br>
+      10.07.25 – 02.08.25<br>
+      Group Exhibition
+
+      <div class="gallery">
+        <img src="/Yeah/ExhibionDropdown/not1.webp">
+        <img src="/Yeah/ExhibionDropdown/not2.webp">
+        <img src="/Yeah/ExhibionDropdown/not3.webp">
+        <img src="/Yeah/ExhibionDropdown/not4.webp">
+      </div>
+
+      <a href="exhibitions/not-a-threat.html" class="view-button">View →</a>
+    </div>
+  </div>
+</div>
+
+<!-- 02 -->
+<div class="exhibit">
+  <div class="exhibit-header">
+    <div class="exhibit-number">(02)</div>
+    <div class="exhibit-title">Juvenile</div>
+  </div>
+  <div class="exhibit-body">
+    <div class="exhibit-body-inner">
+      Derrelle Elijah, Sam Hutchinson & Charlie Tallott<br>
+      06.06.25 – 28.06.25<br>
+      Group Exhibition
+
+      <div class="gallery">
+        <img src="/Yeah/ExhibionDropdown/Charlie_Shipton_001.webp">
+        <img src="/Yeah/ExhibionDropdown/MU3A5324+copy.webp">
+        <img src="/Yeah/ExhibionDropdown/MU3A5329+copy.webp">
+        <img src="/Yeah/ExhibionDropdown/MU3A5332+copy.webp">
+        <img src="/Yeah/ExhibionDropdown/MU3A5343+copy.webp">
+      </div>
+
+      <a href="exhibitions/juvenile.html" class="view-button">View →</a>
+    </div>
+  </div>
+</div>
+
+<!-- 03 -->
+<div class="exhibit">
+  <div class="exhibit-header">
+    <div class="exhibit-number">(03)</div>
+    <div class="exhibit-title">Hinterland</div>
+  </div>
+  <div class="exhibit-body">
+    <div class="exhibit-body-inner">
+      Olivia Bryant, Elizabeth Dimitroff, Wenhui Hao & Jack Whitelock<br>
+      18.04.25 – 17.05.25<br>
+      Group Exhibition
+
+      <div class="gallery">
+        <img src="/Yeah/ExhibionDropdown/Hinter1.webp">
+        <img src="/Yeah/ExhibionDropdown/hinter2.webp">
+        <img src="/Yeah/ExhibionDropdown/hinter3.webp">
+        <img src="/Yeah/ExhibionDropdown/hinter4.webp">
+        <img src="/Yeah/ExhibionDropdown/hinter5.webp">
+      </div>
+
+      <a href="exhibitions/hinterland.html" class="view-button">View →</a>
+    </div>
+  </div>
+</div>
+
+<!-- 04 -->
+<div class="exhibit">
+  <div class="exhibit-header">
+    <div class="exhibit-number">(04)</div>
+    <div class="exhibit-title">No Destination</div>
+  </div>
+  <div class="exhibit-body">
+    <div class="exhibit-body-inner">
+      Rebecca Foster-Clarke<br>
+      14.03.25 – 12.04.25<br>
+      Solo Exhibition
+
+      <div class="gallery">
+        <img src="/Yeah/Images/NoDestinationCover.webp">
+      </div>
+
+      <a href="exhibitions/no-destination.html" class="view-button">View →</a>
+    </div>
+  </div>
+</div>
+
+</section>
+
+</main>
+
+<footer>
+<strong>SHIPTON</strong><br><br>
+Unit B1, Studio 07, Mainyard Studios<br>
+Curie House, 80 Wallis Rd, London E9 5LN<br><br>
+info@shipton.gallery<br>
+Instagram: @shipton__
+</footer>
+
+<script>
+
+/* Slider */
+
+const slides = document.querySelectorAll(".slide");
+const next = document.querySelector(".next");
+const prev = document.querySelector(".prev");
+let current = 0;
+
+function showSlide(i){
+  slides.forEach(s=>s.classList.remove("active"));
+  slides[i].classList.add("active");
+}
+
+function nextSlide(){
+  current = (current+1)%slides.length;
+  showSlide(current);
+}
+
+function prevSlide(){
+  current = (current-1+slides.length)%slides.length;
+  showSlide(current);
+}
+
+next.onclick = e => { e.preventDefault(); nextSlide(); };
+prev.onclick = e => { e.preventDefault(); prevSlide(); };
+
+setInterval(nextSlide, 8000);
+
+
+/* Collapsible (click again collapses) */
+
+const exhibits = document.querySelectorAll(".exhibit");
+
+exhibits.forEach(ex => {
+  ex.addEventListener("click", function(e){
+
+    if(e.target.closest(".view-button")) return;
+
+    if(ex.classList.contains("open")){
+      ex.classList.remove("open");
+    } else {
+      exhibits.forEach(item => item.classList.remove("open"));
+      ex.classList.add("open");
+    }
+
+  });
+});
+
+
+/* Stagger reveal (OUTSIDE click handler) */
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry=>{
+    if(entry.isIntersecting){
+      entry.target.classList.add("visible");
+    }
+  });
+}, { threshold: 0.1 });
+
+exhibits.forEach(ex => observer.observe(ex));
+
+</script>
+
+
+</body>
+</html>

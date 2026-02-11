@@ -113,31 +113,40 @@
 
     /* ================= MOBILE ================= */
 
-    @media (max-width: 900px) {
-      header {
-        position: sticky;
-        background: linear-gradient(
-          to bottom,
-          rgba(255,255,255,1) 0%,
-          rgba(255,255,255,0.85) 60%,
-          rgba(255,255,255,0) 100%
-        );
-      }
+@media (max-width: 900px) {
+  body {
+    overflow: auto;
+  }
 
-      main {
-        padding: 32px;
-      }
+  header {
+    position: sticky;
+    background: transparent; /* ← removes fade */
+  }
 
-      .title {
-        font-size: 3rem;
-        margin-bottom: 40px;
-      }
+  main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
 
-      .about-grid {
-        grid-template-columns: 1fr;
-        gap: 32px;
-      }
-    }
+  .text-column {
+    order: 1;
+    height: auto;
+    overflow: visible;
+    padding: 32px;
+  }
+
+  .image-column {
+    order: 2;
+    height: auto;
+    overflow: visible;
+    padding: 32px;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+}
+
   </style>
 </head>
 
