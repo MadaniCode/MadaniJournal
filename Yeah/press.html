@@ -26,60 +26,47 @@
     }
 
     /* ================= HEADER ================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 36px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 200;
+  mix-blend-mode: difference;
+}
 
-    header {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: var(--header-h);
-      padding: 24px 32px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      z-index: 100;
-      pointer-events: none;
-      background: linear-gradient(
-        to bottom,
-        rgba(255,255,255,1) 0%,
-        rgba(255,255,255,0.9) 55%,
-        rgba(255,255,255,0) 100%
-      );
-    }
+.logo {
+  font-family: var(--sans);
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  text-decoration: none;
+  color: #fff;
+}
 
-    header * {
-      pointer-events: auto;
-    }
+.top-actions {
+  display: flex;
+  gap: 28px;
+}
 
-    .logo {
-      font-family: var(--sans);
-      font-size: 14px;
-      letter-spacing: -0.02em;
-      text-decoration: none;
-      color: inherit;
-    }
+.top-actions a {
+  font-family: var(--sans);
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
 
-    .top-actions {
-      display: flex;
-      gap: 12px;
-    }
-
-    .pill {
-      padding: 8px 14px;
-      border: 1.5px dashed currentColor;
-      border-radius: 999px;
-      background: #fff;
-      font-size: 12px;
-      text-decoration: none;
-      color: inherit;
-      font-family: var(--sans);
-    }
-
-    .pill.active {
-      background: currentColor;
-      color: #fff;
-      border-style: solid;
-    }
+.top-actions a:hover {
+  opacity: 1;
+}
 
     /* ================= LAYOUT ================= */
 
